@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35818.85 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6.1c Move All Zeroes", "6.1c Move All Zeroes.csproj", "{AC549227-F83C-430F-A900-5CA4AC3832CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC549227-F83C-430F-A900-5CA4AC3832CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC549227-F83C-430F-A900-5CA4AC3832CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC549227-F83C-430F-A900-5CA4AC3832CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC549227-F83C-430F-A900-5CA4AC3832CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4E483EA3-8C36-4291-9059-C2FCCB09AF7D}
+	EndGlobalSection
+EndGlobal

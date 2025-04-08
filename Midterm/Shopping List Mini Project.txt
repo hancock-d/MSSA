@@ -1,0 +1,67 @@
+Shopping List Mini Project
+
+0 Default Page: First page to show--similar to login page
+-Ask users which stores they shop at
+	-If stores >2....Or just let them keep adding?
+	-Store A 
+	-Store B
+-Continue (to Page 1)
+
+1 Home Page:
+-After user clicks continue from first page, this will now be the "home" page. Any "return to start" type buttons come here
+-View my list button (new page)
+-Quick add button
+	-Text box item name
+	-Dropdown Store
+		-0 Both
+		-1 Costco / User input
+		-2 Safeway / User input
+	-Dropdown count
+		-0-10 (0 is blank)
+-View Stores (radio button?)
+	-Remove store
+	
+-View Store (radio)
+	-Continue
+		-Show store list
+
+
+2 Shopping List Page:
+-Show shopping lists from Store 1 and Store 2
+-Checkboxes for items
+	-Remove items
+	-Sort items (check boxed go to bottom)
+-Add item
+	-Text box item name
+	-Dropdown Store
+		-0 Both
+		-1 Costco / User input
+		-2 Safeway / User input
+	-Dropdown count
+		-0-10 (0 is blank)
+-Remove store
+	-Alert, deletes all items in that store
+-Sort items
+*-Search for item
+
+
+
+Pre-added list for stores A and B
+-Avocado (SW)
+-Kleenex (Costco)
+-Popcorn (SW)
+-Rice (SW)
+-Noodles (SW)
+-Salad dressing (SW_
+-Cheese (Costco)
+-Pickles (SW)
+-Bacon thick (Costco)
+-Eggs (Costco)
+-Bananas (SW)
+
+Hey MAtt! Left the capital A typo so I'd look less like a bot :)
+I'm a transitioning service member at JBLM, WA (near Seattle), saw your profile and thought I'd reach out! Currently going through Microsoft's MSSA program (MSFT Software and Systems Academy) and will be in the job market soon!
+
+Fellow MSSA student, CAD! Glad to find fellow strugglers!
+
+

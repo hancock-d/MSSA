@@ -1,0 +1,22 @@
+5.2d Palindrome Recursion
+
+4. Write a program in C# Sharp to check whether a given string is Palindrome or not using recursion.
+Test Data :
+Input a string : RADAR
+Expected Output :
+The string is Palindrome.
+
+
+
+
+======================
+
+terminating condition-- if palindrome.length == 1 or 0 (?)return true(?)
+
+R -- [0] == length-1, return true/false
+O
+T
+O
+R
+
+if R and R are ==, calculate a substring and pass the smaller portion to the palindrome method

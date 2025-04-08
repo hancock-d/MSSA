@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.2 Remove LL Elements", "12.2 Remove LL Elements.csproj", "{7A6FA984-EF75-4F45-8A23-35E6B14EF334}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A6FA984-EF75-4F45-8A23-35E6B14EF334}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A6FA984-EF75-4F45-8A23-35E6B14EF334}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A6FA984-EF75-4F45-8A23-35E6B14EF334}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A6FA984-EF75-4F45-8A23-35E6B14EF334}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E85C2B19-99CC-4068-9022-184006757F9D}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,15 @@
+5.2c Recursion n to 1
+
+3. Write a program in C# Sharp to print numbers from n to 1 using recursion.
+Test Data :
+How many numbers to print : 10
+Expected Output :
+10 9 8 7 6 5 4 3 2 1
+
+
+Same as 5.2b but reversed
+
+
+================
+
+Recursion demo 2

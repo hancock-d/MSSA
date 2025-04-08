@@ -1,0 +1,15 @@
+6.3 Call Queue
+
+You are developing a program to manage a call queue of customers using the Queue in C#.
+The program creates a queue of callers and demonstrates the functionality of enqueueing elements into the queue and iterating over the elements and dequeuing.
+
+Use linked lists.
+
+Can create Queue as a generic Q
+Only need Enqueue and Dequeue
+
+Add customers
+When serving them, you can dequeue them
+Display how many customers remain in the queue
+
+Node class can contain data as just a phone number and name

@@ -1,0 +1,16 @@
+3.2e Find index of array item
+
+5. Create a function that finds the index of a given item in the array
+
+Examples
+Search([1, 5, 3], 5) ➞ 1 *find 5, located at index 1
+Search([9, 8, 3], 3) ➞ 2 *find 3, located at index 2
+Search([1, 2, 3], 4) ➞ -1 *find 4, not in index return -1
+
+Notes
+
+If the item is not present, return -1.
+
+like a search function
+find the index of the given number, display which index number it's at
+Use for loop?

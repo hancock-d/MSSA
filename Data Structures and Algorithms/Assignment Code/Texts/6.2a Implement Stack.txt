@@ -1,0 +1,8 @@
+6.2a Implement Stack Array
+
+1. Write a C# program to implement a stack by using array with push and pop operations. 
+
+
+
+
+2h29m

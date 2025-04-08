@@ -1,0 +1,15 @@
+4.2 Challenge Divisible by 2 or 3, Add
+
+2. Divisible by 2 or 3
+
+Given two integers
+write a method that returns their multiplication if they are both divisible by 2 or 3
+otherwise returns their sum.
+
+Expected input and output
+
+DivisibleBy2Or3(15, 30) → 450 DivisibleBy2Or3(2, 90) → 180 DivisibleBy2Or3(7, 12) → 19
+
+-One-line code in function with an OR function
+	-If both divisible by 2 OR both divisible by 3
+	-otherwise, return sum

@@ -1,0 +1,32 @@
+6.1a House Linked List
+
+1. Implement a single linked list with each node representing a house.
+You may add data in it like house number, brief address, type of house ( like Ranch, Colonial). 
+Each house (node) will be linked to next.
+Give facility to the user to search a house by its number and then display the details. ( Windows Form or Console)
+
+
+Each house node will require these 3 values
+
+    class Node
+    {
+public in HouseId {get; set; }
+public string Address {get; set; }
+public string Type {get; set; }
+        public int data;// data 
+        public Node next;// address of next node / ref/ link to next 
+        public Node(int val,Node next)
+        {
+            this.data = val;
+            this.next = next;
+        }
+
+
+any node when created for the first time will be null
+
+Use the struct to assign house-node (?)
+
+can just use addfirst or addlast
+
+
+

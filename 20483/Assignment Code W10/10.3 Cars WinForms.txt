@@ -1,0 +1,29 @@
+10.3 Cars Database
+
+Create a table “Cars”. Add columns (properties) like VIN, Make, Model, Year, Price etc.
+Create a Windows forms app to display records in grid. Perform basic CRUD.
+Use the code first approach.
+
+PKey = VIN
+
+Only need 1 table
+Create a carDb
+-PCAD16Cars
+Model is car model
+-One dbSet (Cars)
+
+data source=DAVE-G14;initial catalog=PCAD16Cars;integrated security=True;encrypt=False;trustservercertificate=True;MultipleActiveResultSets=True
+
+====Resources:
+Mod7CodeFirstDemoDave
+
+
+
+
+
+DAVE-G14 (server name)
+app.config -> connectionstring= ->
+	data source=DAVE-G14;initial catalog=PCAD16Books;integrated security=True;encrypt=False;trustservercertificate=True;MultipleActiveResultSets=True
+		make modifications (initial catalog =...)
+	data source=DAVE-G14;initial catalog=PCAD16Employees;integrated security=True;encrypt=False;trustservercertificate=True;MultipleActiveResultSets=True
+

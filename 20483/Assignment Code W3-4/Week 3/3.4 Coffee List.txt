@@ -1,0 +1,37 @@
+3.4 Coffee List
+
+Windows forms based
+
+    Create an abstract base class to represent “Beverage” and inherit “Coffee” class from it. Create a list ( you may use List class) of coffees. Design windows form application to display the list of coffees in grid and perform add/ delete.
+
+Keep some base properties in Beverage class which can be inherited in Coffee. Inherited class can have more specific properties. Properties are customizable as needed.
+
+
+Write abstract base class beverage
+	CustomerName, Temperature, Cup
+Inherit coffee from beverage
+	Drink, Bean, Roast
+
+Can treat it as inventory system or coffee order system (going to kiosk/shop, placing order in system, 
+Use combo boxes for properties, helps with errors
+
+--------
+
++Program.cs --Main method
++Data.cs
+
++Abstract Beverage class
++Coffee class
+
+Order Form with grid design
+order form.cs
+
+
+---------Resources---------
+w1d4
+	--Mod6ClassesDemo for
+	--assignment 1.4b for basic class
+10975-Assignment code
+	--2.2a class hierarchy
+
+!!!!!Examples: 30Jan25 1h58m and 2h3m

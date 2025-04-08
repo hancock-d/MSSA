@@ -1,0 +1,21 @@
+5.3a Flowerbed Adjacent
+
+1. You have a long flowerbed in which some of the plots are planted, and some are not. However, flowers cannot be planted in adjacent plots.
+
+Given an integer array flowerbed containing 0's and 1's, where 0 means empty and 1 means not empty, and an integer n, return true if n new flowers can be planted in the flowerbed without violating the no-adjacent-flowers rule and false otherwise.
+
+Example 1:
+Input: flowerbed = [1,0,0,0,1], n = 1 
+Output: true
+
+Example 2:
+Input: flowerbed = [1,0,0,0,1], n = 2
+Output: false
+
+Make it as linear as possible, no n^2 (no nested for loops)
+Conditions to consider when going through the for loop
+
+Determine whether n flowers can be planted in a given flowerbed (represented as array of 1s and 0s)
+Approach should be linear (O(n))==no nested loops
+A flower (1) cannot be next to another flower (1)
+If adjacent plots are empty (0) or out of bounds, can plant

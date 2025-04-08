@@ -1,0 +1,29 @@
+4.1a Phone Book Dictionary
+
+3 Feb 2025 - 3h00m
+
+Design a personal phone /address book using Dictionary collection. Write a person class to store details of person like : FirstName , LastName , PhoneNumber, PhoneType Enum, Address
+
+Provide a grid to display all, add more, delete ( with confirmation message) and search by name.
+
+Search should show details of person searched. You may use the key as name of person.
+
+Use Dictionary--special collection class
+Name of the person can be the key(?)
+
+Give option to add a record into the phone book
+Check if key is already there (same name cannot be added)
+Search--Have search button to search name of person and get name of person
+
+If done in console, must use foreach loop
+If windows form, use grid
+
+Need a person object--make a person class
+
+Can convert dictionary to list
+
+========
+
+Examples at 4h40m
+
+Dictionaryname.values.toList --to display all the values

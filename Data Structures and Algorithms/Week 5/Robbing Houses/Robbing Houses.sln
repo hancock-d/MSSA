@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35728.132
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robbing Houses", "Robbing Houses.csproj", "{26E7EA16-C2F4-4D74-A4D3-93251CD71817}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobbingHouses2", "..\RobbingHouses2\RobbingHouses2.csproj", "{671C2BDA-B243-4B9E-B6A4-B99A824BEACB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{26E7EA16-C2F4-4D74-A4D3-93251CD71817}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26E7EA16-C2F4-4D74-A4D3-93251CD71817}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26E7EA16-C2F4-4D74-A4D3-93251CD71817}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26E7EA16-C2F4-4D74-A4D3-93251CD71817}.Release|Any CPU.Build.0 = Release|Any CPU
+		{671C2BDA-B243-4B9E-B6A4-B99A824BEACB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{671C2BDA-B243-4B9E-B6A4-B99A824BEACB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{671C2BDA-B243-4B9E-B6A4-B99A824BEACB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{671C2BDA-B243-4B9E-B6A4-B99A824BEACB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,36 @@
+3.3 Student Windows Forms
+
+Using windows form
+
+Use different controls on windows forms and change their properties (do not submit this assignment)
+
+    Create a class: Student with fields like studid, firstname, lastname, address,monthofadmission,grade to hold character.
+--Do not have to create a person class
+
+Create a list of students and perform following operations in windows application:
+
+    add new records,
+    delete record and
+    display them in grid.
+
+Monthofadmission should be enum.
+
+
+program.cs -main method code
+
+Form1.cs - code for login page -Don't need this for homework
+Form1.cs[design] - login to the system -Don't need this for homework
+
+MainForm.cs - code for portal page
+MainForm.cs [design] - Portal for adding/removing students/showing all the students
+
+AddForm.cs - code for adding student details page
+AddForm.cs [design] - portal page for adding student name, address, grade...
+
+data.cs - Wrapper code, create class that holds a static list of students
+
+Employee/Student.cs - Class Code for student with Enum for MonthOfAdmission (dropdown that showed department)
+
+
+
+

@@ -1,0 +1,16 @@
+Challenge 3.1 Palindrome
+
+1. Given a string, write a method that checks if it is a palindrome (is read the same backward as forward). Assume that string may consist only of lower-case letters.
+
+Expected input and output
+
+IsPalindrome("eye") → true
+IsPalindrome("home") → false
+
+-Don't use in-built functions (like reverse)
+-do a for loop to check if first/last letter are the same, 2nd/2nd to last, etc...
+-use pointers (implementing and decrementing)
+
+
+-----Resources
+Mod1StringsDemo (w3d1)

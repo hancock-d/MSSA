@@ -1,0 +1,59 @@
+4.2 Teacher LMS Winforms
+
+On Winforms
+Design a mini learning management for Teacher Role.
+Allow the Teacher to login. If the User id is “Teacher” and password “Admin” allow the user to get into the system and open another form. Allow teacher to add student with following fields:
+
+Student Id
+Student name
+GPA
+
+Use any suitable generic list to save students in it.
+Save the details of the student with highest GPA in a text file.
+Allow teacher to delete the student.
+
+* Write class for Student and include necessary properties in them.
+**If you want more properties in Student add them as needed.
+
+Allow teacher to login--login screen--hardcoded value for ID and Password (Teacher, Admin)
+After login, another form opens up--see list of students, view students
+	IDs, names, GPAs, any other details
+		Can use generic list class to store all these students
+Sort students according to GPA (IComparer?)
+	Save student details with highest GPA in text file--File.IO
+
+Use StreamWriter to write into the file
+
+Forms:
+Login page
+	Username, Password, Submit
+Portal Page
+	-Student Grid, Refresh, Add student, delete student, download file, Sort?
+	
+Add Student Page
+	-Student ID, FirstName, LastName, GPA, (FullName), Nickname?
+
+Student class
+	-Student ID, FirstName, LastName, GPA, (FullName), Nickname?
+	-Also have IComparer
+	-StudentData====public static List<Student> Students = new List<Student>();
+
+Data--Add this under the student class^^
+	-Wrapper, public static List<Student> Students = new List<Student>();
+
+Program.cs
+	Add hard-coded students here
+
+======
+
+use demo Mod4InterFaceDemo2
+4 FEB 3h40m
+
+W2D2 Mod9FileDemo1
+video demo 4 Feb 4h51m
+
+portal
+form
+program
+data
+...

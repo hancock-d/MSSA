@@ -1,0 +1,18 @@
+10.1 (De)Serialize Object XML, JSON
+
+Create any user defined class of your choice like Student, Customer etc.
+Add 3 properties in it (of your choice).
+Serialize and deserialize the a list of the objects of this class by XML, JSON format.
+
+
+Create a class: Student
+3 Properties: Name, Age, ID { get; set; }
+
+Instead of single object serialization, do a list
+List of students and completely serialize the list
+You can create the list using dummy data/hard-coded
+When you read them back, you have to get the list back
+
+Serialize: Convert an object into a format that can be saved to a file or transmitted (send data over a network)
+Deserialize: Reconstruct the object from the serialized format--allows you to retrieve the object's data after saving it
+

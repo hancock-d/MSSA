@@ -1,0 +1,92 @@
+4.1 Challenge If Number Contains 3
+
+1. If number contains 3
+
+Write a method that checks if given number (positive integer) contains digit 3. Do not convert number to other type. Do not use built-in functions like Contains(), StartsWith(), etc.
+
+Expected input and output
+
+IfNumberContains3(7201432) → true IfNumberContains3(87501) → false
+
+-Do not have to convert into another type
+-Do not use any inbuilt functions (contains, startswith, checkwith, etc...)
+-Can do it by dividing(?)
+-Once you see the first instance of 3, return the function
+
+=========EXAMPLE===========
+
+Pseudo-code
+while num > 0;  //loop until num == 0
+	digit = num % 10 //extract last digit
+	if digit == 3; //check if it (the last digit) == 3
+		return true //if yes, return true
+	num /= 10 //if not/else, remove the last digit and reassign num
+end while-loop
+	return false //if no 3 is found, return false when num == 0
+
+Explanation:
+1- Function definition
+2- Loop until number becomes zero--while loop as long as num > 0
+3- Extract the last digit--digit = num % 10--calculates the remainder when num is divided by 10, effective extracting the last digit of the numbers
+4- Check for 3--if digit == 3--if extracted digit is ==3, function immediately returns true
+5- Update the number--num /=10--performs integer division, removing the last digit from num by dividing it by 10 and discarding the remainder
+6- Return false if no 3 found
+
+=====
+
+DEMO 5 Feb 2h42min
+
+
+static bool IfNumberContains3(int num)
+{
+while (num > 0)
+	{
+	digit = num %10
+		if (digit == 3)
+			return true;
+		else
+			num /= 10
+	}
+return false;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+static bool IfNumberContains3(int num
+{
+while (num > 0)
+{
+int digit = num%10;
+if (digit ==3)
+return true
+else
+num /= 10;
+}
+return false;
+}

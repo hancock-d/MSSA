@@ -1,0 +1,9 @@
+3.2a Create 2D Array
+
+1. Create a 2D array to store integers and print them in matrix format with proper formatting.
+
+e. g:
+| 2 | 3 | 4 |
+| 1 | 4 | 6 |
+
+Print formatting can be however you want, in a cube, like this

@@ -1,0 +1,6 @@
+@CRUDWebAPI_Dave_HostAddress = http://localhost:5059
+
+GET {{CRUDWebAPI_Dave_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

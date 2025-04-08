@@ -1,0 +1,54 @@
+Greedy Algorithm
+Knapsack
+
+Minimal weight, maximum profit
+
+{profit, weight}
+
+input = {{60, 10}, {100, 20}, {120, 30}}	W(eight)=50
+
+Calculate profit:weight ratio
+Sort them by highest ratio
+Take the ones with highest ratio
+
+==========================
+Exercise: Children and cookies
+Problem# 455, 561
+===
+Sort the input
+
+Input:  g = [1,2,3]
+	s = [1,1]
+Output: 1
+Explanation: Cookie sizes are only 1 and 1. Greed factors are 1, 2, 3. Only cookies size 1 can satisfy greed size 1
+Even though you have 2 cookies, since their size is both 1, you could only make the child whose greed factor is 1 content.
+
+
+Input:  g = [1,2]
+	s = [1,2,3]
+Output: 2
+Explanation: 
+
+
+Answer: 1h42m 27 Feb 25
+Sort both arrays (g and s)
+
+public int FindContentChildren(int[] g, int[] s)
+//Sort both arrays
+ARray.Sort(g)
+Array.Sort(s)
+
+int childIndex =0, cookieIndex =0;
+while (childIndex < g.Length && cookieIndex < s.Length)
+// if the current cookie can satisfy the current child
+if (g[childIndex] <= s[cookieIndex]
+//move to the next child and next cookie
+childindex, cookieindex ++
+else
+// Try the next larger cookie for the same child
+cookieIndex++;
+
+
+=============================
+Problem #860
+Lemonade stand

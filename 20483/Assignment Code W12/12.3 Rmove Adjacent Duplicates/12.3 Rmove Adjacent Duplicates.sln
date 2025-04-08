@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.3 Rmove Adjacent Duplicates", "12.3 Rmove Adjacent Duplicates.csproj", "{196D0672-D6E6-44C8-866E-46F625D9F3EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{196D0672-D6E6-44C8-866E-46F625D9F3EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{196D0672-D6E6-44C8-866E-46F625D9F3EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{196D0672-D6E6-44C8-866E-46F625D9F3EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{196D0672-D6E6-44C8-866E-46F625D9F3EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0CA385A0-10C7-477D-8E13-7A21ADCF78B6}
+	EndGlobalSection
+EndGlobal

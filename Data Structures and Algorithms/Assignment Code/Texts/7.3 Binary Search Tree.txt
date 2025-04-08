@@ -1,0 +1,16 @@
+7.3 Binary Search Tree
+
+You are given the root of a binary search tree (BST) and an integer val.
+
+Find the node in the BST that the node's value equals val and return the subtree rooted with that node. If such a node does not exist, return null.
+
+Function you'll be writing to do the search
+Getting root and integer value
+Find the node in the BST so that node's value == value you're trying to find
+return subtree rooted in that node; the node reference; the temp
+don't just return a Boolean value, return the node reference if found
+return null if not found
+
+
+===========
+Use mod 8 demo

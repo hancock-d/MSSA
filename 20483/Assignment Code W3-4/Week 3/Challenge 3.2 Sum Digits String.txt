@@ -1,0 +1,17 @@
+Challenge 3.2 Sum Digits String
+
+2. Sum digits in string
+
+Given a string, write a method which returns sum of all digits in that string. Assume that string contains only single digits.
+
+Expected input and output
+
+SumDigitsInString("1q2w3e") → 6 SumDigitsInString("L0r3m.1p5um") → 9
+SumDigitsInString("") → 0
+
+
+Check if each character is a digit; if so, convert it to a number to be added
+Single digits only since 20 will be read as single characters of 2 and 0
+
+
+-----Resources

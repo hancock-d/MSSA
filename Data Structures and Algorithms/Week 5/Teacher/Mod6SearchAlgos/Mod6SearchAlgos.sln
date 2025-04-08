@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mod6SearchAlgos", "Mod6SearchAlgos.csproj", "{3CF2D5DF-62BD-4E61-8DB0-3AB7559D0F10}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3CF2D5DF-62BD-4E61-8DB0-3AB7559D0F10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CF2D5DF-62BD-4E61-8DB0-3AB7559D0F10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CF2D5DF-62BD-4E61-8DB0-3AB7559D0F10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CF2D5DF-62BD-4E61-8DB0-3AB7559D0F10}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2039D276-267E-45D3-BAFD-A22971A71B86}
+	EndGlobalSection
+EndGlobal

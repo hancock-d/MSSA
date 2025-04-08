@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mod6Structdemo", "Mod6Structdemo.csproj", "{CAC141BF-E702-44CA-A9AD-810B0F9278A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CAC141BF-E702-44CA-A9AD-810B0F9278A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAC141BF-E702-44CA-A9AD-810B0F9278A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAC141BF-E702-44CA-A9AD-810B0F9278A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAC141BF-E702-44CA-A9AD-810B0F9278A0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {202B4B6F-1EB8-477E-A287-C80BF762F412}
+	EndGlobalSection
+EndGlobal

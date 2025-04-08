@@ -1,0 +1,70 @@
+Challenge 3.3 Indices Add Target
+
+3. Given an array of integers called nums and an integer target,
+return indices of the two numbers such that they add up to target.
+
+You may assume that each input would have exactly one solution, and you may not use the same element twice (if target is 8, cannot use 4 twice--[4, 2, 6, 11]
+
+Input: nums = [2,7,11,15], target = 9
+
+Output: [0,1]
+
+Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
+
+
+Based on array
+Once you get the solution, you're done
+
+-----Resources
+
+
+using System;
+
+namespace Challenge_3_3_IndicesAddTarget
+{
+    internal class Program
+    {
+        // Method to find the indices of two numbers that add up to target.
+        public static int[] TwoSum(int[] nums, int target)
+        {
+            // Loop over each element in the array.
+            for (int i = 0; i < nums.Length; i++)
+            {
+                // For the current element, loop over all elements that come after it.
+                for (int j = i + 1; j < nums.Length; j++)
+                {
+                    // Check if the sum of the current pair equals the target.
+                    if (nums[i] + nums[j] == target)
+                    {
+                        // If so, return their indices.
+                        return new int[] { i, j };
+                    }
+                }
+            }
+            // This line should never be reached because the problem guarantees a solution.
+            return null;
+        }
+
+        static void Main(string[] args)
+        {
+            // Example input: nums = [2, 7, 11, 15] and target = 9.
+            int[] nums = { 2, 7, 11, 15 };
+            int target = 9;
+
+            // Get the indices of the two numbers that add up to the target.
+            int[] indices = TwoSum(nums, target);
+
+            if (indices != null)
+            {
+                Console.WriteLine($"Indices: {indices[0]}, {indices[1]}");
+            }
+            else
+            {
+                Console.WriteLine("No solution found.");
+            }
+
+            // Wait for a key press before closing.
+            Console.ReadKey();
+        }
+    }
+}

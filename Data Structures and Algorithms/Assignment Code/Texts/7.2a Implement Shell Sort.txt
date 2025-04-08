@@ -1,0 +1,7 @@
+7.2a Implement Shell Sort
+
+Implement shell sort on an unsorted array of numbers. Take the array input from user.
+
+Based off demo
+Try different technique, different loop maybe
+Focus is on sorting on an array of simple numbers

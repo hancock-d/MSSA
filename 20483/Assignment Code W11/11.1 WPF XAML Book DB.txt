@@ -1,0 +1,7 @@
+11.1 WPF XAML Book Inventory 
+
+Create a books inventory with all necessary fields like ISBN/BookID, Name, author name, description of book/Genre/copies available
+ISBN can be primary key. (Or book ID)
+
+Use code first approach.
+Use SQLite

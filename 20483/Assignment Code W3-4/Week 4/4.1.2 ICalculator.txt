@@ -1,0 +1,29 @@
+4.1.2 ICalculator
+
+Using winforms interface
+Look like normal calculator
+
+Create an interface for ICalculator for methods like add, subtract, divide, multiply and implement them in a class: Math.
+
+Use winforms to design a simple calculator with textboxes and buttons.
+Use the above designed interface in the calculator.
+
+
+=======
+
+Due this weekend
+
+4 Feb @ 4h46m
+
+subtract button
+if (double.TryParse(txtInput.Text, out num1))  --If you can convert txtInput.text to a double, it will assign it to num1
+operation = "-"
+
+multiply
+if (double.TryParse(txtInput.Text, out num1))
+operation = "*"
+
+Divide
+if (double.TryParse(txtInput.text, out num1))
+operation = "/"
+
