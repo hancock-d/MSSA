@@ -1,7 +1,0 @@
-Online:
--Check all computer requirements
-	-Mic
-	-Audio
-	-Internet
-	-Camera
--Notepad, pen/pencil
