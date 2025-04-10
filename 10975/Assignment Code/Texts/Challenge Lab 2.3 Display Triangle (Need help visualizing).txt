@@ -1,0 +1,25 @@
+Write a C# Sharp program that:
+-takes a number and a width also a number as input
+-display a triangle of that width, using that number.
+Test Data
+Enter a number: 6
+Enter the desired width: 6
+Expected Output:
+
+666666
+66666
+6666
+666
+66
+6
+
+
+get number and width from user
+for loop or while loop
+
+
+i (Row)		j Inner Loop (how many #s printed in row)	Resulting Output
+i = 1		j = 1						5
+i = 2		j = 1, 2					55
+i = 3		j = 1, 2, 3					555
+i = 4		j = 1, 2, 3, 4					5555

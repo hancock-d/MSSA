@@ -1,0 +1,5 @@
+2.3b Tip Calculator *Do not have to submit, we're doing it together
+
+Design a tip calculator : enter the bill total, tip % and display grand total after adding tip.
+
+Use the format specifiers to display currency, % symbol.

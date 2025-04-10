@@ -1,0 +1,130 @@
+2.2b Overloading Math Operations
+
+Overloading: Write a simple Math class (don't use keyword Math, maybe MathOperations, it will be a conflict with standard class from system).
+Write overloaded methods with logic
+Give choice to user to call different methods:
+a) Add(int num1, int num2) --take in/pass the 2 integer numbers, add them, get the result
+b) Add(decimal num1, decimal num2, decimal num3)
+c) Multiply(float num1, float num2)
+d) Multiply(float num1, float num2, float num3)
+
+Declare these methods as public and static
+Invoke these methods in the main method MathOperations(...?)
+
+See if user wants to add 2 or 3 numbers, then pass that to the overloaded method
+See if user wants to multiply 2 or 3 numbers, then pass that to the overloaded method
+
+
+-------
+
+
+ 1. using System;
+
+ 2. public static class MathOperations
+ 3. {
+ 4.     // Add two integers
+ 5.     public static int Add(int num1, int num2)
+ 6.     {
+ 7.         return num1 + num2;
+ 8.     }
+
+ 9.     // Add three decimals
+10.     public static decimal Add(decimal num1, decimal num2, decimal num3)
+11.     {
+12.         return num1 + num2 + num3;
+13.     }
+
+14.     // Multiply two floats
+15.     public static float Multiply(float num1, float num2)
+16.     {
+17.         return num1 * num2;
+18.     }
+
+19.     // Multiply three floats
+20.     public static float Multiply(float num1, float num2, float num3)
+21.     {
+22.         return num1 * num2 * num3;
+23.     }
+24. }
+
+25. class Program
+26. {
+27.     static void Main()
+28.     {
+29.         Console.WriteLine("Choose an operation:");
+30.         Console.WriteLine("1) Add numbers");
+31.         Console.WriteLine("2) Multiply numbers");
+
+32.         Console.Write("Enter your choice (1 or 2): ");
+33.         string operationChoice = Console.ReadLine();
+
+34.         if (operationChoice == "1") // Add numbers
+35.         {
+36.             Console.Write("Do you want to add 2 or 3 numbers? (Enter 2 or 3): ");
+37.             int numberOfInputs = int.Parse(Console.ReadLine());
+
+38.             if (numberOfInputs == 2)
+39.             {
+40.                 Console.Write("Enter the first integer: ");
+41.                 int num1 = int.Parse(Console.ReadLine());
+42.                 Console.Write("Enter the second integer: ");
+43.                 int num2 = int.Parse(Console.ReadLine());
+
+44.                 int result = MathOperations.Add(num1, num2); // Result declared here
+45.                 Console.WriteLine($"The sum of {num1} and {num2} is: {result}");
+46.             }
+47.             else if (numberOfInputs == 3)
+48.             {
+49.                 Console.Write("Enter the first decimal: ");
+50.                 decimal num1 = decimal.Parse(Console.ReadLine());
+51.                 Console.Write("Enter the second decimal: ");
+52.                 decimal num2 = decimal.Parse(Console.ReadLine());
+53.                 Console.Write("Enter the third decimal: ");
+54.                 decimal num3 = decimal.Parse(Console.ReadLine());
+
+55.                 decimal result = MathOperations.Add(num1, num2, num3); // Result declared here
+56.                 Console.WriteLine($"The sum of {num1}, {num2}, and {num3} is: {result}");
+57.             }
+58.             else
+59.             {
+60.                 Console.WriteLine("Invalid input. Please restart the program.");
+61.             }
+62.         }
+63.         else if (operationChoice == "2") // Multiply numbers
+64.         {
+65.             Console.Write("Do you want to multiply 2 or 3 numbers? (Enter 2 or 3): ");
+66.             int numberOfInputs = int.Parse(Console.ReadLine());
+
+67.             if (numberOfInputs == 2)
+68.             {
+69.                 Console.Write("Enter the first float: ");
+70.                 float num1 = float.Parse(Console.ReadLine());
+71.                 Console.Write("Enter the second float: ");
+72.                 float num2 = float.Parse(Console.ReadLine());
+
+73.                 float result = MathOperations.Multiply(num1, num2); // Result declared here
+74.                 Console.WriteLine($"The product of {num1} and {num2} is: {result}");
+75.             }
+76.             else if (numberOfInputs == 3)
+77.             {
+78.                 Console.Write("Enter the first float: ");
+79.                 float num1 = float.Parse(Console.ReadLine());
+80.                 Console.Write("Enter the second float: ");
+81.                 float num2 = float.Parse(Console.ReadLine());
+82.                 Console.Write("Enter the third float: ");
+83.                 float num3 = float.Parse(Console.ReadLine());
+
+84.                 float result = MathOperations.Multiply(num1, num2, num3); // Result declared here
+85.                 Console.WriteLine($"The product of {num1}, {num2}, and {num3} is: {result}");
+86.             }
+87.             else
+88.             {
+89.                 Console.WriteLine("Invalid input. Please restart the program.");
+90.             }
+91.         }
+92.         else
+93.         {
+94.             Console.WriteLine("Invalid choice. Please restart the program and choose 1 or 2.");
+95.         }
+96.     }
+97. }

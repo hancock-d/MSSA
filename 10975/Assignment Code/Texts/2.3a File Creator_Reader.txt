@@ -1,0 +1,14 @@
+2.3a File creator/reader
+
+1- Write a console application to create a text file and save your basic details like name, age, address ( use dummy data).
+2- Read the details from same file and print on console.
+
+Give any name to the file
+create it using File.CreateText
+
+Add basic user information (name, date, address)
+Write it as a part of the string (interpolation)
+
+After writing the information into the file, read it back in the console
+
+Use streamwriter and streamreader

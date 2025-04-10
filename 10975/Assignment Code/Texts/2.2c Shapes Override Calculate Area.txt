@@ -1,0 +1,27 @@
+2.2c Shapes Override Calculate Area
+
+Write an abstract base class: 'Shape'
+	Add properties
+		-id, name, color
+	Add abstract method(calculate area)
+
+Inherit circle shape from base class
+	Add properties
+		-Radius
+	Override calculate area logic for circle
+		Math.PI * r * r
+
+Inherit square class from shape
+	Add properties
+		-Side of square
+	Override calculate area logic for square
+
+Take input from user to select circle or square, and radius/side
+Display the calculated area by calling the calculate area method
+
+No hard-coded values
+
+---
+
+use switch case
+

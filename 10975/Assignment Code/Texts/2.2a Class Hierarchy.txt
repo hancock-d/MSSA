@@ -1,0 +1,23 @@
+2.2a Class hierarchy
+
+Design a class hierarchy of your choice. (Need only class files)
+Pet (Parent) New class, base
+	Dog (Derived 1) New class, inherit pet
+		Hound (Derived 1.a) New class, inherit dog
+			Beagle (Derived 1.a.a) 
+		Terrier
+			Welsh Terrier
+		Working
+			Boxers
+
+Don't need to use main method
+Don't use dog/pet, create own hierarchy
+
+Furniture--Base class -- has legs, material, location
+	chair--new class, inherit Furniture --add nothing
+	table--new class, inherit Furniture --add surface, decorations
+		desk--new class, inherit Table  --add surface, decorations, drawers
+
+	couch--new class, inherit Furniture --has cushions
+	bed--new class, inherit Furniture   --has blankets
+
