@@ -362,4 +362,10 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 
+# Ignore Pro Dev Folder
 PCAD 16 Pro Dev/
+
+# Ignore Microsoft Word Documents
+*.doc
+*.docx
+
