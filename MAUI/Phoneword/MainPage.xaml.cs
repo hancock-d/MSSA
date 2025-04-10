@@ -40,7 +40,20 @@
                 "Yes",
                 "No"))
             {
-                //ToDo: dial the phone
+                try
+                {
+                    if (PhoneDialer.Default.IsSupported && !string.IsNullOrWhiteSpace(translatedNumber))
+                        PhoneDialer.Default.Open(translatedNumber);
+                }
+                catch (ArgumentNullException)
+                {
+                    await DisplayAlert("Unable to dial", "Phone number was invalid.", "OK");
+                }
+                catch (Exception)
+                {
+                    //Other error has occurred.
+                    await DisplayAlert("Unable to dial", "Phone dialing failed.", "OK");
+                }
             }
         }
 
