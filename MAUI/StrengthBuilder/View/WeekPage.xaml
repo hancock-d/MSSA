@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StrengthBuilder.View.WeekPage"
+             xmlns:vm="clr-namespace:StrengthBuilder.ViewModels"
+             Title="Workout Week">
+
+    <ContentPage.BindingContext>
+        <vm:WeekViewModel />
+    </ContentPage.BindingContext>
+    
+    <VerticalStackLayout Padding="20">
+        <Label Text="Welcome to your training week!" FontSize="22" HorizontalOptions="Center"/>
+    </VerticalStackLayout>
+</ContentPage>
