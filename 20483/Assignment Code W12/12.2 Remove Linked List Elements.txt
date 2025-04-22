@@ -1,0 +1,56 @@
+12.2 Remove Linked List Elements
+LeetCode #203
+
+Given the head of a linked list and an integer val, remove all the nodes of the linked list that has Node.val == val, and return the new head.
+
+Example 1:
+Input: head = [1,2,6,3,4,5,6], val = 6
+Output: [1,2,3,4,5]
+
+Example 2:
+Input: head = [], val = 1
+Output: []
+
+Example 3:
+Input: head = [7,7,7,7], val = 7
+Output: []
+
+Remove the node(s) with the value then re-link the list
+
+Just use one pointer, add a dummy node
+
+dummy = head
+dummy.next = head
+current = dummy
+
+while current.next != null
+	if current.next.val == val
+		current.next = current.next.next
+	else
+		current = current.next
+}
+return dummy.next
+
+
+Nope:
+Traverse the list used fast/slow pointers
+dummy = head;
+while head!= null
+{
+slow = head
+fast = head.next
+	if fast == val
+		fast=slow.next.next
+		slow.next=fast
+	else
+		slow = slow.next
+		fast = fast.next
+}
+return head
+	
+
+
+
+
+
+

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35931.197 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrengthBuilder", "StrengthBuilder.csproj", "{FCDA90CA-BF68-4683-A643-DA108E8B804E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrengthBuilder", "StrengthBuilder.csproj", "{4584FAD7-B6E2-4A71-A7F6-A5B2D00A0AE3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FCDA90CA-BF68-4683-A643-DA108E8B804E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FCDA90CA-BF68-4683-A643-DA108E8B804E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FCDA90CA-BF68-4683-A643-DA108E8B804E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FCDA90CA-BF68-4683-A643-DA108E8B804E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4584FAD7-B6E2-4A71-A7F6-A5B2D00A0AE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4584FAD7-B6E2-4A71-A7F6-A5B2D00A0AE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4584FAD7-B6E2-4A71-A7F6-A5B2D00A0AE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4584FAD7-B6E2-4A71-A7F6-A5B2D00A0AE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {F00770D1-3CE1-4BD6-AE92-B829EE4781E9}
+		SolutionGuid = {CDB805AC-19EF-4639-80B3-A927F9D3C59B}
 	EndGlobalSection
 EndGlobal

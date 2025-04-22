@@ -1,0 +1,25 @@
+12.1b Singly Linked List Palindrome
+
+LeetCode #234
+
+Given the head of a singly linked list, return true if it is a palindrome or false otherwise.
+
+Example 1:
+(1) -> (2) -> (2) -> (1)
+Input: head = [1,2,2,1]
+Output: true
+
+Example 2:
+(1) -> (2)
+Input: head = [1,2]
+Output: false
+
+No in-built classes
+Write node-class ourselves
+Can use code from previous demos (linked list node class, methods)
+Return type Boolean
+
+Find middle of the list using slow/fast pointers
+reverse the second half of the list
+compare first half with reversed second half
+return true/false
