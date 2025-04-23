@@ -18,7 +18,7 @@ namespace StrengthBuilder.ViewModels
         {
             if (!string.IsNullOrWhiteSpace(Username))
             {
-                await Application.Current.MainPage.DisplayAlert("Succes", $"Welcome, {Username}!", "Ok");
+                await Application.Current.MainPage.DisplayAlert("Success", $"Welcome, {Username}!", "Ok");
             }
             else
             {

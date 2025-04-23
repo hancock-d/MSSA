@@ -3,13 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="StrengthBuilder.View.WeekPage"
              xmlns:vm="clr-namespace:StrengthBuilder.ViewModels"
-             Title="Workout Week">
+             Title="Week View">
 
     <ContentPage.BindingContext>
         <vm:WeekViewModel />
     </ContentPage.BindingContext>
-    
-    <VerticalStackLayout Padding="20">
-        <Label Text="Welcome to your training week!" FontSize="22" HorizontalOptions="Center"/>
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Label Text="Select your training day (1-9):" FontSize="20" HorizontalOptions="Center"/>
+
+        <Picker ItemsSource="{Binding TrainingDays}"
+                SelectedItem="{Binding SelectedDay}"
+                Title="Choose a day"/>
+
+        <Button Text="Go to workout"
+                Command="{Binding StartWorkoutCommand}"/>
     </VerticalStackLayout>
 </ContentPage>

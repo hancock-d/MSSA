@@ -10,6 +10,10 @@
 
     <!--Register pages-->
     <ShellContent
+        Title="Login"
+        ContentTemplate="{DataTemplate view:LoginPage}"
+        Route="login"/>
+    <ShellContent
         Title="Input"
         ContentTemplate="{DataTemplate view:InputPage}"
         Route="input"/>
@@ -18,5 +22,10 @@
         Title="Week"
         ContentTemplate="{DataTemplate view:WeekPage}"
         Route="week" />
+
+    <ShellContent
+        Title="Workout"
+        ContentTemplate="{DataTemplate view:WorkoutPage}"
+        Route="workout"/>
 
 </Shell>
