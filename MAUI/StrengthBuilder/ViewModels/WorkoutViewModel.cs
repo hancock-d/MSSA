@@ -7,21 +7,59 @@ using System.Text;
 using System.Threading.Tasks;
 using StrengthBuilder.Models;
 using CommunityToolkit.Mvvm.Input;
+using StrengthBuilder.Services;
 
 namespace StrengthBuilder.ViewModels
 {
     public partial class WorkoutViewModel : ObservableObject
     {
-
         public ObservableCollection<string> SquatSets { get; } = new ObservableCollection<string>();
-        public string SelectedDay => UserSession.SelectedDay;
+        [ObservableProperty]
+        private string selectedDay;
+        //public string SelectedDay => UserSession.SelectedDay;
 
         public WorkoutViewModel()
         {
             LoadSquatSets();
         }
 
-        private void LoadSquatSets()
+        public void LoadSquatSets()
+        {
+            SquatSets.Clear();
+            SelectedDay = UserSession.SelectedDay;
+
+            if (int.TryParse(UserSession.SquatMax, out int oneRepMax))
+            {
+                var sets = WorkoutService.GetWorkoutForDay(SelectedDay, oneRepMax);
+
+                foreach (var set in sets)
+                {
+                    SquatSets.Add(set);
+                }
+            }
+            else
+            {
+                SquatSets.Add("Invalid 1RM input.");
+            }
+        }
+        [RelayCommand]
+        private async Task GoBack()
+        {
+            try
+            {
+                await Shell.Current.GoToAsync("//week");
+            }
+            catch (Exception ex)
+            {
+                await Application.Current.MainPage.DisplayAlert("Error", ex.Message, "Ok");
+            }
+        }
+    }
+}
+
+
+/*
+ *         private void LoadSquatSets()
         {
             if (int.TryParse(UserSession.SquatMax, out int oneRepMax))
             {
@@ -42,10 +80,4 @@ namespace StrengthBuilder.ViewModels
                 SquatSets.Add("Invalid 1RM input.");
             }
         }
-        [RelayCommand]
-        private async Task GoBack()
-        {
-            await Shell.Current.GoToAsync("//week");
-        }
-    }
-}
+*/

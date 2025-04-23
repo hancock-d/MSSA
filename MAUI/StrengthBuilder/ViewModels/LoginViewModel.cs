@@ -17,13 +17,9 @@ namespace StrengthBuilder.ViewModels
         private async Task Login()
         {
             if (!string.IsNullOrWhiteSpace(Username))
-            {
                 await Application.Current.MainPage.DisplayAlert("Success", $"Welcome, {Username}!", "Ok");
-            }
             else
-            {
                 await Application.Current.MainPage.DisplayAlert("Error", "Please enter a username", "Ok");
-            }
         }
     }
 }

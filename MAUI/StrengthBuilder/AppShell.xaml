@@ -17,12 +17,10 @@
         Title="Input"
         ContentTemplate="{DataTemplate view:InputPage}"
         Route="input"/>
-
     <ShellContent
         Title="Week"
         ContentTemplate="{DataTemplate view:WeekPage}"
         Route="week" />
-
     <ShellContent
         Title="Workout"
         ContentTemplate="{DataTemplate view:WorkoutPage}"
