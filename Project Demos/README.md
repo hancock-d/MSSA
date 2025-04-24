@@ -5,3 +5,6 @@ Tower Defense with Unity
 
 PhoneWord Dialer with Maui
 [![PhoneWord Dialer Maui](https://img.youtube.com/vi/ie8XZKke2hI/0.jpg)](https://www.youtube.com/shorts/ie8XZKke2hI)
+
+MonkeyFinder with Maui
+[![Watch the video](https://img.youtube.com/vi/UGv7O8clPmk/0.jpg)](https://www.youtube.com/shorts/UGv7O8clPmk)
