@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StrengthBuilder.View.WeekPage"
+             xmlns:vm="clr-namespace:StrengthBuilder.ViewModels"
+             Title="Week View">
+
+    <ContentPage.BindingContext>
+        <vm:WeekViewModel />
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout Padding="10" Spacing="10" HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="Select your training day:"
+               FontSize="20" 
+               HorizontalOptions="Center"/>
+        <Picker ItemsSource="{Binding TrainingDays}"
+                SelectedItem="{Binding SelectedDay}"
+                FontSize="14"
+                HorizontalOptions="Center"
+                WidthRequest="125"
+                HeightRequest="30"/>
+
+        <Button Text="Continue" Command="{Binding StartWorkoutCommand}"
+                FontSize="14"
+                HorizontalOptions="Center"
+                WidthRequest="125"
+                HeightRequest="40"
+                CornerRadius="10"/>
+    </VerticalStackLayout>
+</ContentPage>

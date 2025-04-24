@@ -22,7 +22,7 @@
                 FontSize="14"
                 HorizontalOptions="Center"
                 WidthRequest="125"
-                HeightRequest="45"
+                HeightRequest="40"
                 CornerRadius="10"/>
     </VerticalStackLayout>
 </ContentPage>

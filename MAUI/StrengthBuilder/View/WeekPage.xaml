@@ -9,14 +9,22 @@
         <vm:WeekViewModel />
     </ContentPage.BindingContext>
 
-    <VerticalStackLayout Padding="20" Spacing="15">
-        <Label Text="Select your training day (1-9):" FontSize="20" HorizontalOptions="Center"/>
-
+    <VerticalStackLayout Padding="10" Spacing="10" HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="Select your training day:"
+               FontSize="20" 
+               HorizontalOptions="Center"/>
         <Picker ItemsSource="{Binding TrainingDays}"
                 SelectedItem="{Binding SelectedDay}"
-                Title="Choose a day"/>
+                FontSize="14"
+                HorizontalOptions="Center"
+                WidthRequest="125"
+                HeightRequest="30"/>
 
-        <Button Text="Go to workout"
-                Command="{Binding StartWorkoutCommand}"/>
+        <Button Text="Continue" Command="{Binding StartWorkoutCommand}"
+                FontSize="14"
+                HorizontalOptions="Center"
+                WidthRequest="125"
+                HeightRequest="40"
+                CornerRadius="10"/>
     </VerticalStackLayout>
 </ContentPage>

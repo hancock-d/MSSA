@@ -31,10 +31,16 @@ namespace StrengthBuilder.ViewModels
             if (int.TryParse(UserSession.SquatMax, out int oneRepMax))
             {
                 var sets = WorkoutService.GetWorkoutForDay(SelectedDay, oneRepMax);
-
-                foreach (var set in sets)
+                if (sets.Count == 0)
                 {
-                    SquatSets.Add(set);
+                    SquatSets.Add("No workout available for this day.");
+                }
+                else
+                {
+                    foreach (var set in sets)
+                    {
+                        SquatSets.Add(set);
+                    }
                 }
             }
             else

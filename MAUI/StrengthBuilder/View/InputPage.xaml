@@ -9,18 +9,22 @@
         <vm:InputViewModel/>
     </ContentPage.BindingContext>
 
-    <VerticalStackLayout Padding="10" Spacing="10">
+    <VerticalStackLayout Padding="10" Spacing="10" HorizontalOptions="Center" VerticalOptions="Center">
 
-            <Label Text="Squat 1RM:" FontSize="20"
+        <Label Text="Current 1RM:"
+               FontSize="20"
                HorizontalOptions="Center"/>
-            <Entry Placeholder="e.g. 225" HorizontalOptions="Center" WidthRequest="100"
-                   MinimumHeightRequest="10"
-               Keyboard="Numeric"
-               Text="{Binding SquatMax}"/>
-
-        <Button Text="Continue" Margin="0" FontSize="14"
-                WidthRequest="125" MinimumHeightRequest="40"
+        <Entry Placeholder="e.g. 225" Text="{Binding SquatMax}"
+               FontSize="14"
+               HorizontalOptions="Center"
+               WidthRequest="125"
+               HeightRequest="30"
+               Keyboard="Numeric"/>
+        <Button Text="Continue" Command="{Binding ContinueCommand}"
+                FontSize="14"
                 HorizontalOptions="Center"
-                Command="{Binding ContinueCommand}"/>
+                WidthRequest="125"
+                HeightRequest="40"
+                CornerRadius="10"/>
     </VerticalStackLayout>
 </ContentPage>
