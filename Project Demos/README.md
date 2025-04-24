@@ -1,3 +1,3 @@
-# MSSA
-This is where all the assignments, challenge labs, and projects we've done in the Microsoft Software Systems Academy are being held.
-This was an excellent program and extremely challenging and rigorous. I am lucky to have been a part of it!
+Downloadable videos of some of the projects I've done during the course.
+
+[![Watch the video](https://img.youtube.com/vi/UGv7O8clPmk/0.jpg)](https://www.youtube.com/shorts/UGv7O8clPmk)
