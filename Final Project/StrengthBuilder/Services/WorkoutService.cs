@@ -13,7 +13,7 @@ namespace StrengthBuilder.Services
         {
             return (int)(Math.Round(value / 5.0) * 5);
         }
-        ////Get training 1rm (90% of 1rm)
+        //TODO: Get training 1rm (90% of 1rm)
         //private static int GetTrainingMax(int oneRepMax)
         //{
         //    return (int)(oneRepMax * 0.9);

@@ -22,4 +22,6 @@ namespace StrengthBuilder.ViewModels
                 await Application.Current.MainPage.DisplayAlert("Error", "Please enter a username", "Ok");
         }
     }
+
+    //TODO: add method to save the username to a persistent storage
 }
