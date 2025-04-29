@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace StrengthBuilder.Services
 {
+    //handles the CRUD operations for the user
     public class UserService
     {
         private readonly AppDbContext _dbContext;

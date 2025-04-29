@@ -37,7 +37,7 @@ namespace StrengthBuilder.Models
         }
         public static async Task GoBackAsync()
         {
-            await Shell.Current.Navigation.PopAsync(); //pops the top pack from the stack
+            await Shell.Current.Navigation.PopAsync(); //pops the top path from the stack
         }
     }
 }

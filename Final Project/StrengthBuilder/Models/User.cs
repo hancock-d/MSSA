@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace StrengthBuilder.Models
 {
-    //db model for saved users
+    //db model for saved users, represents a user of the app
     public class User
     {
         [Key]

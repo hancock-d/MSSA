@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace StrengthBuilder.Services
 {
+    //generates the workout sets for a given training day
     public static class WorkoutService
     {
         //Helper method for rounding to nearest 5

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace StrengthBuilder.Models
 {
+    //represents a workout day and sets for that day
     public class WorkoutDay
     {
         public int Id { get; set; }

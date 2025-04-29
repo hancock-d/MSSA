@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace StrengthBuilder.Models
 {
+    //represents an individual workout set
     public class WorkoutSet
     {
         public int Id { get; set; }
