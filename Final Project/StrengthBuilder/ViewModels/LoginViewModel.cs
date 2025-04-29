@@ -52,14 +52,13 @@ namespace StrengthBuilder.ViewModels
                     };
 
                     await _userService.AddUserAsync(newUser);
-                    //Set the current user session to newUser
-                    userToSet = newUser;
+                    userToSet = newUser; //Set the current user session to newUser
                     //UserSession.CurrentUser = newUser;
+
                 }
                 else
                 {
-                    //set session to existing user
-                    userToSet = existingUser;
+                    userToSet = existingUser; //set session to existing user
                     //UserSession.CurrentUser = existingUser;
                 }
                 //set the current user session
