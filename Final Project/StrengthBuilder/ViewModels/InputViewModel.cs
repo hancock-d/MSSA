@@ -57,5 +57,35 @@ namespace StrengthBuilder.ViewModels
                 await Application.Current.MainPage.DisplayAlert("Error", "Please enter your squat 1RM.", "Ok");
             }
         }
+        //[RelayCommand]
+        //private async Task DeleteUser()
+        //{
+        //    if (UserSession.CurrentUser == null)
+        //    {
+        //        await Shell.Current.DisplayAlert("Error", "No active user session found.", "Ok");
+        //        return;
+        //    }
+
+        //    bool confirm = await Shell.Current.DisplayAlert("Confirm Deletion", "Are you sure you want to delete your account?", "Yes", "Cancel");
+
+        //    if (!confirm)
+        //        return;
+        //    try
+        //    {
+        //        //delete user from db
+        //        await _userService.DeleteUserAsync(UserSession.CurrentUser);
+        //        //clear sessions
+        //        UserSession.CurrentUser = null;
+        //        Preferences.Remove("LoggedInUsername");
+
+        //        await Shell.Current.GoToAsync("//login");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        await Application.Current.MainPage.DisplayAlert("Error", $"Failed to delete user: {ex.Message}", "Ok");
+        //    }
+        //}
+
     }
 }
+

@@ -14,6 +14,7 @@ namespace StrengthBuilder.Models
         public int Id { get; set; }
         public string Username { get; set; }
         public int SquatMax { get; set; }
+        //public string Password { get; set; }
 
         //public int DeadliftMax { get; set; }
         //public int BenchMax { get; set; }

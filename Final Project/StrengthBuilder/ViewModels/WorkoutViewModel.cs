@@ -44,7 +44,6 @@ namespace StrengthBuilder.ViewModels
                         SquatSets.Add(set);
                     }
                 }
-
             }
             else
             {

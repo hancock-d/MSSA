@@ -4,18 +4,18 @@ namespace StrengthBuilder.View;
 
 public partial class WorkoutPage : ContentPage
 {
-    private readonly WorkoutViewModel _viewModel; //why am I doing this again?
+    private readonly WorkoutViewModel _viewModel; //declare a field to store the view model
     public WorkoutPage(WorkoutViewModel viewModel)
     {
         InitializeComponent();
         _viewModel = viewModel;
-        BindingContext = _viewModel; //set the binding context to the view model
+        BindingContext = viewModel; //set the binding context to the view model
     }
     //Method to reload with data reflecting selected day
     protected override void OnAppearing()
     {
         base.OnAppearing();
-        _viewModel.LoadSquatSets();
+        _viewModel.LoadSquatSets();  //use stored field
 
     }
 }

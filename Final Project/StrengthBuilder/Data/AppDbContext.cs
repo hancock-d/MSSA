@@ -15,8 +15,21 @@ namespace StrengthBuilder.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var dbPath = Path.Combine(FileSystem.AppDataDirectory, "strengthBuilder.db3");
-            optionsBuilder.UseSqlite($"Filename={dbPath}");
+            if (!optionsBuilder.IsConfigured)
+            {
+                var projectFolderPath = @"C:\MSSA\PCAD16\Final Project\StrengthBuilder";
+
+                if (!Directory.Exists(projectFolderPath))
+                {
+                    Directory.CreateDirectory(projectFolderPath);
+                }
+
+                var dbPath = Path.Combine(projectFolderPath, "strengthBuilder.db3");
+
+                optionsBuilder.UseSqlite($"Filename={dbPath}");
+            }
+            //var dbPath = Path.Combine(FileSystem.AppDataDirectory, "strengthBuilder.db3");
+            //optionsBuilder.UseSqlite($"Filename={dbPath}");
         }
 
         public AppDbContext()

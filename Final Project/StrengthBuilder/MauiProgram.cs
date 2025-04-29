@@ -18,6 +18,8 @@ namespace StrengthBuilder
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
+#if DEBUG
+            builder.Logging.AddDebug();
 
             //register services
             builder.Services.AddDbContext<AppDbContext>();
@@ -32,10 +34,6 @@ namespace StrengthBuilder
             builder.Services.AddSingleton<InputPage>();
             builder.Services.AddSingleton<WeekPage>();
             builder.Services.AddSingleton<WorkoutPage>();
-
-
-#if DEBUG
-            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();

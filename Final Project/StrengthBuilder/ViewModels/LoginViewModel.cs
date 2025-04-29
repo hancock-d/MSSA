@@ -29,10 +29,16 @@ namespace StrengthBuilder.ViewModels
         [RelayCommand]
         private async Task Login()
         {
-            if (!string.IsNullOrWhiteSpace(Username))
+            if (string.IsNullOrWhiteSpace(Username))
             {
+                await Application.Current.MainPage.DisplayAlert("Error", "Please enter a username", "Ok");
+                return;
+            }
 
+            try
+            {
                 var existingUser = await _userService.GetUserByUsernameAsync(Username);
+                User userToSet; //this will be the user to set in the session
 
                 //check if user already exists
                 if (existingUser == null)
@@ -45,17 +51,63 @@ namespace StrengthBuilder.ViewModels
                     };
 
                     await _userService.AddUserAsync(newUser);
+                    //set the current user session
+                    userToSet = newUser;
+                    //UserSession.CurrentUser = newUser;
                 }
-                //Navigate to input page
-                await Application.Current.MainPage.DisplayAlert("Success", $"Welcome, {Username}!", "Ok");
-                await Shell.Current.GoToAsync("//input");
+                else
+                {
+                    //set session to existing user
+                    userToSet = existingUser;
+                    //UserSession.CurrentUser = existingUser;
+                }
+                //set the current user session
+                UserSession.CurrentUser = userToSet;
+
+                if (UserSession.CurrentUser != null)
+                {
+                    //Navigate to input page
+                    await Application.Current.MainPage.DisplayAlert("Success", $"Welcome, {Username}!", "Ok");
+                    await Shell.Current.GoToAsync("//input");
+                }
+                else
+                {
+                    await Application.Current.MainPage.DisplayAlert("Error", "Unable to initialize user session.", "Ok");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                await Application.Current.MainPage.DisplayAlert("Error", "Please enter a username", "Ok");
+                // Handle any exceptions that occur during the login process
+                await Application.Current.MainPage.DisplayAlert("Error", $"An error occurred: {ex.Message}", "Ok");
+            }
+        }
+        [RelayCommand]
+        private async Task DeleteUser()
+        {
+            if (UserSession.CurrentUser == null)
+            {
+                await Shell.Current.DisplayAlert("Error", "No active user session found.", "Ok");
+                return;
+            }
+
+            bool confirm = await Shell.Current.DisplayAlert("Confirm Deletion", "Are you sure you want to delete your account?", "Yes", "Cancel");
+
+            if (!confirm)
+                return;
+            try
+            {
+                //delete user from db
+                await _userService.DeleteUserAsync(UserSession.CurrentUser);
+                //clear sessions
+                UserSession.CurrentUser = null;
+                Preferences.Remove("LoggedInUsername");
+
+                await Shell.Current.GoToAsync("//login");
+            }
+            catch (Exception ex)
+            {
+                await Application.Current.MainPage.DisplayAlert("Error", $"Failed to delete user: {ex.Message}", "Ok");
             }
         }
     }
 }
-
-
