@@ -5,9 +5,7 @@
              xmlns:vm="clr-namespace:StrengthBuilder.ViewModels"
              Title="Input 1RM">
 
-    <ContentPage.BindingContext>
-        <vm:InputViewModel/>
-    </ContentPage.BindingContext>
+
 
     <VerticalStackLayout Padding="10" Spacing="10" HorizontalOptions="Center" VerticalOptions="Center">
 

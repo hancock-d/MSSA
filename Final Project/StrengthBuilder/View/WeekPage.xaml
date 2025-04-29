@@ -5,9 +5,6 @@
              xmlns:vm="clr-namespace:StrengthBuilder.ViewModels"
              Title="Week View">
 
-    <ContentPage.BindingContext>
-        <vm:WeekViewModel />
-    </ContentPage.BindingContext>
 
     <VerticalStackLayout Padding="10" Spacing="10" HorizontalOptions="Center" VerticalOptions="Center">
         <Label Text="Select your training day:"

@@ -7,11 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using StrengthBuilder.Models;
+using StrengthBuilder.Services;
 
 namespace StrengthBuilder.ViewModels
 {
     public partial class InputViewModel : ObservableObject
     {
+        private readonly UserService _userService;
+
+        //Dependecy injection for USerService (saves updates)
+        public InputViewModel(UserService userService)
+        {
+            _userService = userService;
+        }
+
         [ObservableProperty]
         private string squatMax;
 
@@ -20,16 +29,32 @@ namespace StrengthBuilder.ViewModels
         {
             if (!string.IsNullOrWhiteSpace(SquatMax))
             {
-                //Store the squat max in the UserSession
-                UserSession.SquatMax = SquatMax;
+                if (UserSession.CurrentUser != null)
+                {
+                    if (int.TryParse(SquatMax, out int squatMaxValue))
+                    {
+                        // Update the current user's squat max
+                        UserSession.CurrentUser.SquatMax = squatMaxValue;
 
-                //await Application.Current.MainPage.DisplayAlert("Saved", $"Squat 1RM: {SquatMax}", "Ok");
-                //Navigate to WeekPage
-                await Shell.Current.GoToAsync("//week"); // added the "//" to navigate to the root of the app shell then to the page
+                        // Save changes back to the database
+                        await _userService.UpdateUserAsync(UserSession.CurrentUser);
+
+                        // Navigate to the next page
+                        await Shell.Current.GoToAsync("//week");
+                    }
+                    else
+                    {
+                        await Application.Current.MainPage.DisplayAlert("Error", "Please enter a valid number for squat 1RM.", "Ok");
+                    }
+                }
+                else
+                {
+                    await Application.Current.MainPage.DisplayAlert("Error", "No active user session found.", "Ok");
+                }
             }
             else
             {
-                await Application.Current.MainPage.DisplayAlert("Error", "Please enter a squat 1RM", "Ok");
+                await Application.Current.MainPage.DisplayAlert("Error", "Please enter your squat 1RM.", "Ok");
             }
         }
     }

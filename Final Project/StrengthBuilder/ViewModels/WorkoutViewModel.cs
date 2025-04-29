@@ -9,6 +9,7 @@ using StrengthBuilder.Models;
 using CommunityToolkit.Mvvm.Input;
 using StrengthBuilder.Services;
 
+
 namespace StrengthBuilder.ViewModels
 {
     public partial class WorkoutViewModel : ObservableObject
@@ -16,7 +17,6 @@ namespace StrengthBuilder.ViewModels
         public ObservableCollection<string> SquatSets { get; } = new ObservableCollection<string>();
         [ObservableProperty]
         private string selectedDay;
-        //public string SelectedDay => UserSession.SelectedDay;
 
         public WorkoutViewModel()
         {
@@ -28,12 +28,14 @@ namespace StrengthBuilder.ViewModels
             SquatSets.Clear();
             SelectedDay = UserSession.SelectedDay;
 
-            if (int.TryParse(UserSession.SquatMax, out int oneRepMax))
+            if (UserSession.CurrentUser != null)
             {
+                int oneRepMax = UserSession.CurrentUser.SquatMax;
+
                 var sets = WorkoutService.GetWorkoutForDay(SelectedDay, oneRepMax);
                 if (sets.Count == 0)
                 {
-                    SquatSets.Add("No workout available for this day.");
+                    SquatSets.Add("No workout available for this day");
                 }
                 else
                 {
@@ -42,10 +44,11 @@ namespace StrengthBuilder.ViewModels
                         SquatSets.Add(set);
                     }
                 }
+
             }
             else
             {
-                SquatSets.Add("Invalid 1RM input.");
+                SquatSets.Add("No session active.");
             }
         }
         [RelayCommand]
