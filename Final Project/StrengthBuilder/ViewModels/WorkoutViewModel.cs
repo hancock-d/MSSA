@@ -50,17 +50,16 @@ namespace StrengthBuilder.ViewModels
                 SquatSets.Add("No session active.");
             }
         }
+
         [RelayCommand]
         private async Task GoBack()
         {
-            try
-            {
-                await Shell.Current.GoToAsync("//week");
-            }
-            catch (Exception ex)
-            {
-                await Application.Current.MainPage.DisplayAlert("Error", ex.Message, "Ok");
-            }
+            await UserSession.GoBackAsync();
+        }
+        [RelayCommand]
+        private async Task GoHome()
+        {
+            await UserSession.GoHomeAsync();
         }
     }
 }

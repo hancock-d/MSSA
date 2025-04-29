@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using StrengthBuilder.Models;
 using StrengthBuilder.Services;
+using StrengthBuilder.View;
 
 namespace StrengthBuilder.ViewModels
 {
@@ -68,7 +69,7 @@ namespace StrengthBuilder.ViewModels
                 {
                     //Navigate to input page
                     await Application.Current.MainPage.DisplayAlert("Success", $"Welcome, {Username}!", "Ok");
-                    await Shell.Current.GoToAsync("//input");
+                    await Shell.Current.GoToAsync(nameof(InputPage));
 
                     Username = string.Empty;
                 }

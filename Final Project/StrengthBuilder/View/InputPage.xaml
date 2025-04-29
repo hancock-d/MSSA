@@ -18,12 +18,20 @@
                WidthRequest="125"
                HeightRequest="30"
                Keyboard="Numeric"/>
-        <Button Text="Continue" Command="{Binding ContinueCommand}"
+        <Button Text="Confirm" Command="{Binding ContinueCommand}"
                 FontSize="14"
                 HorizontalOptions="Center"
                 WidthRequest="125"
                 HeightRequest="40"
                 CornerRadius="10"/>
+        <Button Text="Home" Command="{Binding GoHomeCommand}"
+                FontSize="14"
+                HorizontalOptions="Center"
+                WidthRequest="125"
+                HeightRequest="40"
+                CornerRadius="10"/>
+
+
 
     </VerticalStackLayout>
 </ContentPage>

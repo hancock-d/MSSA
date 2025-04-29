@@ -9,4 +9,13 @@ public partial class InputPage : ContentPage
         InitializeComponent();
         BindingContext = viewModel; //set the binding context to the view model
     }
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        if (BindingContext is InputViewModel viewModel)
+        {
+            viewModel.LoadCurrentSquatMax();
+        }
+
+    }
 }

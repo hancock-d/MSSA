@@ -1,4 +1,5 @@
 ﻿using StrengthBuilder.Models;
+using StrengthBuilder.View;
 namespace StrengthBuilder
 {
     public partial class AppShell : Shell
@@ -6,12 +7,11 @@ namespace StrengthBuilder
         public AppShell()
         {
             InitializeComponent();
-            //Shell.Current.GoToAsync("//login"); //jump directly to login page --can't do this, tries to load the page before the shell is initialized
 
-            //if (string.IsNullOrWhiteSpace(UserSession.Username))
-            //    Shell.Current.GoToAsync("//login");
-            //else
-            //    Shell.Current.GoToAsync("//input");
+            Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
+            Routing.RegisterRoute(nameof(InputPage), typeof(InputPage));
+            Routing.RegisterRoute(nameof(WeekPage), typeof(WeekPage));
+            Routing.RegisterRoute(nameof(WorkoutPage), typeof(WorkoutPage));
         }
     }
 }

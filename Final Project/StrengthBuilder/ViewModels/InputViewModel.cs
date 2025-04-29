@@ -25,7 +25,7 @@ namespace StrengthBuilder.ViewModels
         private string squatMax;
 
         [RelayCommand]
-        private async Task Continue()
+        private async Task Continue() //confirm
         {
             if (!string.IsNullOrWhiteSpace(SquatMax))
             {
@@ -40,52 +40,31 @@ namespace StrengthBuilder.ViewModels
                         await _userService.UpdateUserAsync(UserSession.CurrentUser);
 
                         // Navigate to the next page
-                        await Shell.Current.GoToAsync("//week");
+                        await Shell.Current.GoToAsync(nameof(WeekPage));
                     }
                     else
-                    {
                         await Application.Current.MainPage.DisplayAlert("Error", "Please enter a valid number for squat 1RM.", "Ok");
-                    }
                 }
                 else
-                {
                     await Application.Current.MainPage.DisplayAlert("Error", "No active user session found.", "Ok");
-                }
             }
             else
-            {
                 await Application.Current.MainPage.DisplayAlert("Error", "Please enter your squat 1RM.", "Ok");
-            }
         }
-        //[RelayCommand]
-        //private async Task DeleteUser()
-        //{
-        //    if (UserSession.CurrentUser == null)
-        //    {
-        //        await Shell.Current.DisplayAlert("Error", "No active user session found.", "Ok");
-        //        return;
-        //    }
+        [RelayCommand]
+        private async Task GoHome()
+        {
+            await UserSession.GoHomeAsync();
+        }
 
-        //    bool confirm = await Shell.Current.DisplayAlert("Confirm Deletion", "Are you sure you want to delete your account?", "Yes", "Cancel");
-
-        //    if (!confirm)
-        //        return;
-        //    try
-        //    {
-        //        //delete user from db
-        //        await _userService.DeleteUserAsync(UserSession.CurrentUser);
-        //        //clear sessions
-        //        UserSession.CurrentUser = null;
-        //        Preferences.Remove("LoggedInUsername");
-
-        //        await Shell.Current.GoToAsync("//login");
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        await Application.Current.MainPage.DisplayAlert("Error", $"Failed to delete user: {ex.Message}", "Ok");
-        //    }
-        //}
-
+        public void LoadCurrentSquatMax()
+        {
+            if (UserSession.CurrentUser != null && UserSession.CurrentUser.SquatMax > 0)
+                SquatMax = UserSession.CurrentUser.SquatMax.ToString();
+            else
+                SquatMax = string.Empty;
+        }
     }
 }
+
 

@@ -11,7 +11,10 @@
 
     <VerticalStackLayout Padding="10" Spacing="10" HorizontalOptions="Center" VerticalOptions="Center">
         <!--<Label Text="Today's Workout" FontSize="20" HorizontalOptions="Center"/>-->
-        <Label Text="{Binding SelectedDay, StringFormat='Workout Plan for {0}'}" FontSize="20" Margin="0"  HorizontalOptions="Center"/>
+        <Label Text="{Binding SelectedDay, StringFormat='Workout Plan for {0}'}"
+               FontSize="20"
+               Margin="0" 
+               HorizontalOptions="Center"/>
 
         <CollectionView ItemsSource="{Binding SquatSets}">
             <CollectionView.ItemTemplate>
@@ -28,6 +31,12 @@
                 FontSize="14" 
                 HorizontalOptions="Center"
                 WidthRequest="125" HeightRequest="40"
+                CornerRadius="10"/>
+        <Button Text="Home" Command="{Binding GoHomeCommand}"
+                FontSize="14"
+                HorizontalOptions="Center"
+                WidthRequest="125"
+                HeightRequest="40"
                 CornerRadius="10"/>
     </VerticalStackLayout>
 </ContentPage>

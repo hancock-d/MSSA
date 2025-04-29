@@ -1,4 +1,6 @@
-﻿namespace StrengthBuilder
+﻿using StrengthBuilder.View;
+
+namespace StrengthBuilder
 {
     public partial class App : Application
     {
@@ -18,7 +20,7 @@
                 await Task.Delay(100); //wait for the shell to load
                 await MainThread.InvokeOnMainThreadAsync(async () =>
                 {
-                    await Shell.Current.GoToAsync("//login");
+                    await Shell.Current.GoToAsync(nameof(LoginPage));
                 });
             });
 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
+using StrengthBuilder.View;
 
 namespace StrengthBuilder.ViewModels
 {
@@ -35,19 +36,24 @@ namespace StrengthBuilder.ViewModels
             if (!string.IsNullOrWhiteSpace(SelectedDay))
             {
                 UserSession.SelectedDay = SelectedDay;
-                await Shell.Current.GoToAsync("//workout");
+                await Shell.Current.GoToAsync(nameof(WorkoutPage));
             }
             else
             {
                 await Application.Current.MainPage.DisplayAlert("Select a Day", "Please pick a day", "Ok");
             }
-
         }
 
         [RelayCommand]
         private async Task Logout()
         {
             await UserSession.LogoutAsync();
+        }
+
+        [RelayCommand]
+        private async Task GoInput()
+        {
+            await UserSession.GoInputAsync();
         }
     }
 }

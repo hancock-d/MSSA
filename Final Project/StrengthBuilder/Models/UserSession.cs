@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CommunityToolkit.Mvvm.Input;
+using StrengthBuilder.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,8 +24,20 @@ namespace StrengthBuilder.Models
             {
                 CurrentUser = null;
                 Preferences.Remove("LoggedInUsername");
-                await Shell.Current.GoToAsync("//login");
+                await Shell.Current.GoToAsync(nameof(LoginPage));
             }
+        }
+        public static async Task GoHomeAsync()
+        {
+            await Shell.Current.GoToAsync(nameof(LoginPage));
+        }
+        public static async Task GoInputAsync()
+        {
+            await Shell.Current.GoToAsync(nameof(InputPage));
+        }
+        public static async Task GoBackAsync()
+        {
+            await Shell.Current.Navigation.PopAsync(); //pops the top pack from the stack
         }
     }
 }
