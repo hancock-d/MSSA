@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace StrengthBuilder.Models
 {
-    // class stores user session data of current user
+    // class stores user session data of current user, just a static session
     public static class UserSession
     {
         public static User CurrentUser { get; set; }

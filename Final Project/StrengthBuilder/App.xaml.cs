@@ -2,6 +2,7 @@
 
 namespace StrengthBuilder
 {
+    //builds the app and starts it to the correct page
     public partial class App : Application
     {
         public App()

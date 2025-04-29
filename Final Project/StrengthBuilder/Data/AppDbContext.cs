@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace StrengthBuilder.Data
 {
+    //db context for the app, handles the database connection and models
     public class AppDbContext : DbContext
     {
 
@@ -31,9 +32,8 @@ namespace StrengthBuilder.Data
         //    }
         //}
 
-        /// <summary>
+
         /// trying to path for android
-        /// </summary>
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)

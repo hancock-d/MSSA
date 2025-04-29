@@ -53,12 +53,14 @@ namespace StrengthBuilder.ViewModels
 
                     await _userService.AddUserAsync(newUser);
                     userToSet = newUser; //Set the current user session to newUser
+                    await Application.Current.MainPage.DisplayAlert("Sucees", $"First time in? Good luck, {Username}!", "Ok");
                     //UserSession.CurrentUser = newUser;
 
                 }
                 else
                 {
                     userToSet = existingUser; //set session to existing user
+                    await Application.Current.MainPage.DisplayAlert("Sucees", $"Welcome back, {Username}!", "Ok");
                     //UserSession.CurrentUser = existingUser;
                 }
                 //set the current user session
@@ -67,7 +69,7 @@ namespace StrengthBuilder.ViewModels
                 if (UserSession.CurrentUser != null)
                 {
                     //Navigate to input page
-                    await Application.Current.MainPage.DisplayAlert("Success", $"Welcome, {Username}!", "Ok");
+                    //await Application.Current.MainPage.DisplayAlert("Success", $"Welcome, {Username}!", "Ok");
                     await Shell.Current.GoToAsync(nameof(InputPage));
 
                     Username = string.Empty;

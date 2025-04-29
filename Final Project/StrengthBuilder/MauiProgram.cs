@@ -6,6 +6,7 @@ using StrengthBuilder.ViewModels;
 
 namespace StrengthBuilder
 {
+    //Registers services and viewmodels for dependency injection
     public static class MauiProgram
     {
         public static MauiApp CreateMauiApp()

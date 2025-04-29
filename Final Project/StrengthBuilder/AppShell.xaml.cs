@@ -2,6 +2,7 @@
 using StrengthBuilder.View;
 namespace StrengthBuilder
 {
+    //Registers pages and routes for navigation
     public partial class AppShell : Shell
     {
         public AppShell()
