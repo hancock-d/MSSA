@@ -43,5 +43,11 @@ namespace StrengthBuilder.ViewModels
             }
 
         }
+
+        [RelayCommand]
+        private async Task Logout()
+        {
+            await UserSession.LogoutAsync();
+        }
     }
 }

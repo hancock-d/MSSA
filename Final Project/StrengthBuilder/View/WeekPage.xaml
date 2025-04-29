@@ -23,5 +23,12 @@
                 WidthRequest="125"
                 HeightRequest="40"
                 CornerRadius="10"/>
+        <Button Text="Logout" Command="{Binding LogoutCommand}"
+                FontSize="14"
+                HorizontalOptions="Center"
+                WidthRequest="125"
+                HeightRequest="40"
+                CornerRadius="10"
+                />
     </VerticalStackLayout>
 </ContentPage>

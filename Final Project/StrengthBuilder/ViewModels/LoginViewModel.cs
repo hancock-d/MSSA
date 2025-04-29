@@ -51,7 +51,7 @@ namespace StrengthBuilder.ViewModels
                     };
 
                     await _userService.AddUserAsync(newUser);
-                    //set the current user session
+                    //Set the current user session to newUser
                     userToSet = newUser;
                     //UserSession.CurrentUser = newUser;
                 }
@@ -69,6 +69,8 @@ namespace StrengthBuilder.ViewModels
                     //Navigate to input page
                     await Application.Current.MainPage.DisplayAlert("Success", $"Welcome, {Username}!", "Ok");
                     await Shell.Current.GoToAsync("//input");
+
+                    Username = string.Empty;
                 }
                 else
                 {
@@ -103,6 +105,8 @@ namespace StrengthBuilder.ViewModels
                 Preferences.Remove("LoggedInUsername");
 
                 await Shell.Current.GoToAsync("//login");
+                Username = string.Empty;
+
             }
             catch (Exception ex)
             {
