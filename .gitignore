@@ -366,8 +366,12 @@ FodyWeavers.xsd
 PCAD 16 Pro Dev/
 AZ-900/
 AI-900/
+AZ-204/
 
 # Ignore Microsoft Word Documents
 *.doc
 *.docx
+
+# Ignore final project test data
+strengthBuilder.db3
 
