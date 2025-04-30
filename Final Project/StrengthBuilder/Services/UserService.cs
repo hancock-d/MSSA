@@ -25,16 +25,16 @@ namespace StrengthBuilder.Services
             await _dbContext.SaveChangesAsync();
         }
 
-        //public async Task<User> GetUserByUsernameAsync(string username)
-        //{
-        //    return await _dbContext.Users.FirstOrDefaultAsync(u => u.Username == username);
-        //}
-
         public async Task<User> GetUserByUsernameAsync(string username)
         {
-            var users = await _dbContext.Users.ToListAsync();
-            return users.FirstOrDefault(u => u.Username == username);
+            return await _dbContext.Users.FirstOrDefaultAsync(u => u.Username == username);
         }
+
+        //public async Task<User> GetUserByUsernameAsync(string username)
+        //{
+        //    var users = await _dbContext.Users.ToListAsync();
+        //    return users.FirstOrDefault(u => u.Username == username);
+        //}
 
         public async Task<List<User>> GetAllUsersAsync()
         {

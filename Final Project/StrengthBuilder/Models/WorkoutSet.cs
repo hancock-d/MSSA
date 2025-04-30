@@ -13,8 +13,8 @@ namespace StrengthBuilder.Models
         public int Id { get; set; }
         public int Weight { get; set; }
         public int Reps { get; set; }
-        public bool IsAmrap { get; set; }
-        public bool IsWarmup { get; set; }
-        public bool IsCompleted { get; set; }
+        //public bool IsAmrap { get; set; }
+        //public bool IsWarmup { get; set; }
+        //public bool IsCompleted { get; set; }
     }
 }
