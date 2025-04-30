@@ -15,13 +15,19 @@
                HorizontalOptions="Center"
                WidthRequest="200"
                HeightRequest="30"/>
-        <Button Text="Continue" Command="{Binding LoginCommand}"
+        <Button Text="Login" Command="{Binding LoginCommand}"
                 FontSize="14"
                 HorizontalOptions="Center"
                 WidthRequest="125"
                 HeightRequest="40"
                 CornerRadius="10"/>
-        <Button Text="Delete" Command="{Binding DeleteUserCommand}"
+        <Button Text="Logout" Command="{Binding LogoutCommand}"
+                FontSize="14"
+                HorizontalOptions="Center"
+                WidthRequest="125"
+                HeightRequest="40"
+                CornerRadius="10"/>
+        <Button Text="Delete" Command="{Binding DeleteUserCommand}" IsEnabled="{Binding CanDeleteUser}"
                 FontSize="14"
                 BackgroundColor="Red"
                 HorizontalOptions="Center"

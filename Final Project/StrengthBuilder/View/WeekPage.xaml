@@ -28,7 +28,7 @@
                 WidthRequest="125"
                 HeightRequest="40"
                 CornerRadius="10"/>
-        <Button Text="Logout" Command="{Binding LogoutCommand}"
+        <Button Text="Home" Command="{Binding GoHomeCommand}"
                 FontSize="14"
                 HorizontalOptions="Center"
                 WidthRequest="125"

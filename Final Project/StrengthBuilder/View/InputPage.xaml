@@ -18,7 +18,7 @@
                WidthRequest="125"
                HeightRequest="30"
                Keyboard="Numeric"/>
-        <Button Text="Confirm" Command="{Binding ContinueCommand}"
+        <Button Text="Confirm" Command="{Binding ConfirmCommand}"
                 FontSize="14"
                 HorizontalOptions="Center"
                 WidthRequest="125"

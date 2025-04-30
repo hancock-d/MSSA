@@ -24,10 +24,10 @@ namespace StrengthBuilder.ViewModels
         [ObservableProperty]
         private string squatMax;
 
-        //Login_Confirm method
+        //Confirm 1rm method
 
         [RelayCommand]
-        private async Task Continue() //or confirm
+        private async Task Confirm()
         {
             if (!string.IsNullOrWhiteSpace(SquatMax))
             {

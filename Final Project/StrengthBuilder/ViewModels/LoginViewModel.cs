@@ -19,6 +19,9 @@ namespace StrengthBuilder.ViewModels
         [ObservableProperty]
         private string username;
 
+        [ObservableProperty]
+        private bool canDeleteUser = false;
+
         //Constructor injection of user service for DB access
         public LoginViewModel(UserService userService)
         {
@@ -116,6 +119,13 @@ namespace StrengthBuilder.ViewModels
             {
                 await Application.Current.MainPage.DisplayAlert("Error", $"Failed to delete user: {ex.Message}", "Ok");
             }
+        }
+
+        //Logout
+        [RelayCommand]
+        private async Task Logout()
+        {
+            await UserSession.LogoutAsync();
         }
     }
 }

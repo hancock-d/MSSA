@@ -33,16 +33,16 @@ namespace StrengthBuilder.ViewModels
             }
         }
 
-        [RelayCommand]
-        private async Task Logout()
-        {
-            await UserSession.LogoutAsync();
-        }
 
         [RelayCommand]
         private async Task GoInput()
         {
             await UserSession.GoInputAsync();
+        }
+        [RelayCommand]
+        private async Task GoHome()
+        {
+            await UserSession.GoHomeAsync();
         }
     }
 }

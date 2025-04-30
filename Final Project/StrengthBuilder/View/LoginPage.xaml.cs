@@ -16,6 +16,8 @@ public partial class LoginPage : ContentPage
         base.OnAppearing();
         if (BindingContext is LoginViewModel viewModel)
         {
+            var currentUser = UserSession.CurrentUser;
+
             if (UserSession.CurrentUser != null)
             {
                 viewModel.Username = UserSession.CurrentUser.Username;
@@ -24,9 +26,7 @@ public partial class LoginPage : ContentPage
             {
                 viewModel.Username = string.Empty;
             }
-
-            //toggle delete button
-            //viewModel.IsDeleteVisible = UserSession.CurrentUser != null;
+            viewModel.CanDeleteUser = currentUser != null;
         }
     }
 }
