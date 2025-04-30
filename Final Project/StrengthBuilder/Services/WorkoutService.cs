@@ -9,7 +9,6 @@ namespace StrengthBuilder.Services
     //generates the workout sets for a given training day
     public static class WorkoutService
     {
-        //Helper method for rounding to nearest 5
         public static int RoundToNearestFive(double value)
         {
             return (int)(Math.Round(value / 5.0) * 5);
@@ -62,6 +61,3 @@ namespace StrengthBuilder.Services
         }
     }
 }
-
-
-//drop all percents by 5 (didn't do training max)

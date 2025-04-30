@@ -1,6 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using StrengthBuilder.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using StrengthBuilder.View;
+using StrengthBuilder.Helpers;
 
 namespace StrengthBuilder.ViewModels
 {
@@ -33,12 +33,13 @@ namespace StrengthBuilder.ViewModels
             }
         }
 
-
+        /// Relay Commands
         [RelayCommand]
         private async Task GoInput()
         {
             await UserSession.GoInputAsync();
         }
+
         [RelayCommand]
         private async Task GoHome()
         {

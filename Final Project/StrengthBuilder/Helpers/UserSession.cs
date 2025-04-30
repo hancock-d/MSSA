@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.Input;
+using StrengthBuilder.Models;
 using StrengthBuilder.View;
 using System;
 using System.Collections.Generic;
@@ -6,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StrengthBuilder.Models
+namespace StrengthBuilder.Helpers
 {
     // class stores user session data of current user, just a static session
     public static class UserSession
@@ -16,29 +17,39 @@ namespace StrengthBuilder.Models
 
         public static async Task LogoutAsync()
         {
-            bool confirm = await Shell.Current.DisplayAlert("Logout", "Do you want to log out?", "Yes", "Cancel");
-
-            if (!confirm)
+            if (CurrentUser == null)
+            {
+                await Shell.Current.DisplayAlert("Error", "No active user session found.", "Ok");
                 return;
+            }
             else
             {
-                CurrentUser = null;
-                Preferences.Remove("LoggedInUsername");
-                await Shell.Current.GoToAsync(nameof(LoginPage));
+                bool confirm = await Shell.Current.DisplayAlert("Logout", "Do you want to log out?", "Yes", "Cancel");
+
+                if (!confirm)
+                    return;
+                else
+                {
+                    await ClearSession();
+                }
             }
         }
+        public static async Task ClearSession()
+        {
+            CurrentUser = null;
+            SelectedDay = null;
+            Preferences.Remove("CurrentUserId");
+            await Shell.Current.GoToAsync(nameof(LoginPage));
+        }
 
-        //Home Button Method
         public static async Task GoHomeAsync()
         {
             await Shell.Current.GoToAsync(nameof(LoginPage));
         }
-        //Input Button Method
         public static async Task GoInputAsync()
         {
             await Shell.Current.GoToAsync(nameof(InputPage));
         }
-        //Back Button Method
         public static async Task GoBackAsync()
         {
             await Shell.Current.Navigation.PopAsync(); //pops the top path from the stack

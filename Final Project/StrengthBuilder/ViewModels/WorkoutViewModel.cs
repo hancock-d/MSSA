@@ -5,9 +5,9 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using StrengthBuilder.Models;
 using CommunityToolkit.Mvvm.Input;
 using StrengthBuilder.Services;
+using StrengthBuilder.Helpers;
 
 
 namespace StrengthBuilder.ViewModels
@@ -22,7 +22,6 @@ namespace StrengthBuilder.ViewModels
             LoadSquatSets();
         }
 
-        //LoadSquatSets method
         public void LoadSquatSets()
         {
             SquatSets.Clear();
@@ -40,11 +39,13 @@ namespace StrengthBuilder.ViewModels
                 SquatSets.Add("No session active.");
         }
 
+        /// Relay Commands
         [RelayCommand]
         private async Task GoBack()
         {
             await UserSession.GoBackAsync();
         }
+
         [RelayCommand]
         private async Task GoHome()
         {

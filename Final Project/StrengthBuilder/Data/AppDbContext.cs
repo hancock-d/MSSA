@@ -43,7 +43,6 @@ namespace StrengthBuilder.Data
             }
         }
 
-
         public AppDbContext()
         {
             Database.EnsureCreated();

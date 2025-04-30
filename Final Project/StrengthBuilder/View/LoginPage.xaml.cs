@@ -1,4 +1,4 @@
-using StrengthBuilder.Models;
+using StrengthBuilder.Helpers;
 using StrengthBuilder.ViewModels;
 
 namespace StrengthBuilder.View;

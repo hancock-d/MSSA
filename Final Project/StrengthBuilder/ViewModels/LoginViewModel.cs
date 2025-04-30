@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using StrengthBuilder.Models;
 using StrengthBuilder.Services;
 using StrengthBuilder.View;
+using StrengthBuilder.Helpers;
 
 namespace StrengthBuilder.ViewModels
 {
@@ -63,11 +64,9 @@ namespace StrengthBuilder.ViewModels
                 {
                     userToSet = existingUser; //set session to existing user
                     await Application.Current.MainPage.DisplayAlert("Success", $"Welcome back, {Username}!", "Ok");
-                    //UserSession.CurrentUser = existingUser;
                 }
-                //set the current user session
+
                 UserSession.CurrentUser = userToSet;
-                // store userID persistently
                 Preferences.Set("CurrentUserId", userToSet.Id);
 
                 if (UserSession.CurrentUser != null)
@@ -89,6 +88,7 @@ namespace StrengthBuilder.ViewModels
             }
         }
 
+        /// Relay Commands
         //Delete user method
         [RelayCommand]
         private async Task DeleteUser()
@@ -107,11 +107,8 @@ namespace StrengthBuilder.ViewModels
             {
                 //delete user from db
                 await _userService.DeleteUserAsync(UserSession.CurrentUser);
-                //clear sessions
-                UserSession.CurrentUser = null;
-                Preferences.Remove("CurrentUserId");
+                await UserSession.ClearSession();
 
-                await Shell.Current.GoToAsync(nameof(LoginPage));
                 Username = string.Empty;
 
             }
@@ -121,7 +118,6 @@ namespace StrengthBuilder.ViewModels
             }
         }
 
-        //Logout
         [RelayCommand]
         private async Task Logout()
         {

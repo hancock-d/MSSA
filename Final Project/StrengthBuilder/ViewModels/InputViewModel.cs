@@ -6,8 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using StrengthBuilder.Models;
 using StrengthBuilder.Services;
+using StrengthBuilder.Helpers;
 
 namespace StrengthBuilder.ViewModels
 {
