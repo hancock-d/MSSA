@@ -23,6 +23,7 @@ namespace StrengthBuilder.ViewModels
             LoadSquatSets();
         }
 
+        //LoadSquatSets method
         public void LoadSquatSets()
         {
             SquatSets.Clear();
@@ -31,24 +32,13 @@ namespace StrengthBuilder.ViewModels
             if (UserSession.CurrentUser != null)
             {
                 int oneRepMax = UserSession.CurrentUser.SquatMax;
-
                 var sets = WorkoutService.GetWorkoutForDay(SelectedDay, oneRepMax);
-                if (sets.Count == 0)
-                {
-                    SquatSets.Add("No workout available for this day");
-                }
-                else
-                {
-                    foreach (var set in sets)
-                    {
-                        SquatSets.Add(set);
-                    }
-                }
+
+                foreach (var set in sets)
+                    SquatSets.Add(set);
             }
             else
-            {
                 SquatSets.Add("No session active.");
-            }
         }
 
         [RelayCommand]

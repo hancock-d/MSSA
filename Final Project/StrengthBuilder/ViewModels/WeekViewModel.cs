@@ -14,22 +14,11 @@ namespace StrengthBuilder.ViewModels
     public partial class WeekViewModel : ObservableObject
     {
         public ObservableCollection<string> TrainingDays { get; set; } = new ObservableCollection<string>
-        {
-            "Day 1",
-            "Day 2",
-            "Day 3",
-            "Day 4",
-            "Day 5",
-            "Day 6",
-            "Day 7",
-            "Day 8",
-            "Day 9",
-        };
+        { "Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7", "Day 8", "Day 9"};
 
         [ObservableProperty]
         private string selectedDay;
 
-        //public string SquatInfo => $"Your squat max is {UserSession.SquatMax} lbs.";
         [RelayCommand]
         private async Task StartWorkout()
         {

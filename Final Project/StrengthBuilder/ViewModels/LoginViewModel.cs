@@ -13,20 +13,19 @@ namespace StrengthBuilder.ViewModels
 {
     public partial class LoginViewModel : ObservableObject
     {
-        //store the injected service
+        //Service to fetch, add, delete user records
         private readonly UserService _userService;
-
-
 
         [ObservableProperty]
         private string username;
 
-        //Constructor injection
+        //Constructor injection of user service for DB access
         public LoginViewModel(UserService userService)
         {
             _userService = userService;
         }
 
+        //Login and registration method
         [RelayCommand]
         private async Task Login()
         {
@@ -53,23 +52,24 @@ namespace StrengthBuilder.ViewModels
 
                     await _userService.AddUserAsync(newUser);
                     userToSet = newUser; //Set the current user session to newUser
-                    await Application.Current.MainPage.DisplayAlert("Sucees", $"First time in? Good luck, {Username}!", "Ok");
+                    await Application.Current.MainPage.DisplayAlert("Success", $"First time in? Good luck, {Username}!", "Ok");
                     //UserSession.CurrentUser = newUser;
 
                 }
                 else
                 {
                     userToSet = existingUser; //set session to existing user
-                    await Application.Current.MainPage.DisplayAlert("Sucees", $"Welcome back, {Username}!", "Ok");
+                    await Application.Current.MainPage.DisplayAlert("Success", $"Welcome back, {Username}!", "Ok");
                     //UserSession.CurrentUser = existingUser;
                 }
                 //set the current user session
                 UserSession.CurrentUser = userToSet;
+                // store userID persistently
+                Preferences.Set("CurrentUserId", userToSet.Id);
 
                 if (UserSession.CurrentUser != null)
                 {
                     //Navigate to input page
-                    //await Application.Current.MainPage.DisplayAlert("Success", $"Welcome, {Username}!", "Ok");
                     await Shell.Current.GoToAsync(nameof(InputPage));
 
                     Username = string.Empty;
@@ -85,6 +85,8 @@ namespace StrengthBuilder.ViewModels
                 await Application.Current.MainPage.DisplayAlert("Error", $"An error occurred: {ex.Message}", "Ok");
             }
         }
+
+        //Delete user method
         [RelayCommand]
         private async Task DeleteUser()
         {
@@ -94,7 +96,7 @@ namespace StrengthBuilder.ViewModels
                 return;
             }
 
-            bool confirm = await Shell.Current.DisplayAlert("Confirm Deletion", "Are you sure you want to delete your account?", "Yes", "Cancel");
+            bool confirm = await Shell.Current.DisplayAlert("Confirm Deletion", $"Are you sure you want to delete your account, {UserSession.CurrentUser.Username}?", "Yes", "Cancel");
 
             if (!confirm)
                 return;
@@ -104,9 +106,9 @@ namespace StrengthBuilder.ViewModels
                 await _userService.DeleteUserAsync(UserSession.CurrentUser);
                 //clear sessions
                 UserSession.CurrentUser = null;
-                Preferences.Remove("LoggedInUsername");
+                Preferences.Remove("CurrentUserId");
 
-                await Shell.Current.GoToAsync("//login");
+                await Shell.Current.GoToAsync(nameof(LoginPage));
                 Username = string.Empty;
 
             }

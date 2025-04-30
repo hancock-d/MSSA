@@ -14,8 +14,7 @@ public partial class InputPage : ContentPage
         base.OnAppearing();
         if (BindingContext is InputViewModel viewModel)
         {
-            viewModel.LoadCurrentSquatMax();
+            viewModel.LoadCurrentSquatMax(); //refresh user's max when page loads
         }
-
     }
 }

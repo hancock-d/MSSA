@@ -27,14 +27,18 @@ namespace StrengthBuilder.Models
                 await Shell.Current.GoToAsync(nameof(LoginPage));
             }
         }
+
+        //Home Button Method
         public static async Task GoHomeAsync()
         {
             await Shell.Current.GoToAsync(nameof(LoginPage));
         }
+        //Input Button Method
         public static async Task GoInputAsync()
         {
             await Shell.Current.GoToAsync(nameof(InputPage));
         }
+        //Back Button Method
         public static async Task GoBackAsync()
         {
             await Shell.Current.Navigation.PopAsync(); //pops the top path from the stack

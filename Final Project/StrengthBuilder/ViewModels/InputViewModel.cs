@@ -24,8 +24,10 @@ namespace StrengthBuilder.ViewModels
         [ObservableProperty]
         private string squatMax;
 
+        //Login_Confirm method
+
         [RelayCommand]
-        private async Task Continue() //confirm
+        private async Task Continue() //or confirm
         {
             if (!string.IsNullOrWhiteSpace(SquatMax))
             {
@@ -51,6 +53,8 @@ namespace StrengthBuilder.ViewModels
             else
                 await Application.Current.MainPage.DisplayAlert("Error", "Please enter your squat 1RM.", "Ok");
         }
+
+        
         [RelayCommand]
         private async Task GoHome()
         {

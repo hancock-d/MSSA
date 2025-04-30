@@ -16,21 +16,19 @@
                 HorizontalOptions="Center"
                 WidthRequest="125"
                 HeightRequest="30"/>
-
         <Button Text="Start Workout" Command="{Binding StartWorkoutCommand}"
                 FontSize="14"
                 HorizontalOptions="Center"
                 WidthRequest="125"
                 HeightRequest="40"
                 CornerRadius="10"/>
-        <Button Text="Logout" Command="{Binding LogoutCommand}"
+        <Button Text="Back to Input" Command="{Binding GoInputCommand}"
                 FontSize="14"
                 HorizontalOptions="Center"
                 WidthRequest="125"
                 HeightRequest="40"
-                CornerRadius="10"
-                />
-        <Button Text="Back to Input" Command="{Binding GoInputCommand}"
+                CornerRadius="10"/>
+        <Button Text="Logout" Command="{Binding LogoutCommand}"
                 FontSize="14"
                 HorizontalOptions="Center"
                 WidthRequest="125"

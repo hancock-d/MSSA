@@ -14,11 +14,7 @@ namespace StrengthBuilder.Services
         {
             return (int)(Math.Round(value / 5.0) * 5);
         }
-        //TODO: Get training 1rm (90% of 1rm)
-        //private static int GetTrainingMax(int oneRepMax)
-        //{
-        //    return (int)(oneRepMax * 0.9);
-        //}
+
         public static List<string> GetWorkoutForDay(string day, int oneRepMax)
         {
             var sets = new List<string>();
@@ -27,7 +23,6 @@ namespace StrengthBuilder.Services
             {
                 sets.Add($"1x5 @ {RoundToNearestFive(oneRepMax * 0.4)}#");
                 sets.Add($"1x3 @ {RoundToNearestFive(oneRepMax * 0.5)}#");
-                //sets.Add($"Warm-up: {RoundToNearestFive(oneRepMax * 0.5)} lbs x 3");
             }
 
             switch (day)

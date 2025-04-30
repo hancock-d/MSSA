@@ -1,12 +1,32 @@
+using StrengthBuilder.Models;
 using StrengthBuilder.ViewModels;
 
 namespace StrengthBuilder.View;
 
 public partial class LoginPage : ContentPage
 {
-    public LoginPage(LoginViewModel viewModel) //inject the view model
+    //LoginViewModel injected by constructor
+    public LoginPage(LoginViewModel viewModel)
     {
         InitializeComponent();
-        BindingContext = viewModel; //set the binding context to the view model
+        BindingContext = viewModel; //connect UI controls to the viewmodel
+    }
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        if (BindingContext is LoginViewModel viewModel)
+        {
+            if (UserSession.CurrentUser != null)
+            {
+                viewModel.Username = UserSession.CurrentUser.Username;
+            }
+            else
+            {
+                viewModel.Username = string.Empty;
+            }
+
+            //toggle delete button
+            //viewModel.IsDeleteVisible = UserSession.CurrentUser != null;
+        }
     }
 }
