@@ -11,20 +11,12 @@ using StrengthBuilder.Helpers;
 
 namespace StrengthBuilder.ViewModels
 {
-    public partial class InputViewModel : ObservableObject
+    public partial class InputViewModel(UserService userService) : ObservableObject
     {
-        private readonly UserService _userService;
-
-        //Dependecy injection for USerService (saves updates)
-        public InputViewModel(UserService userService)
-        {
-            _userService = userService;
-        }
-
+        private readonly UserService _userService = userService;
         [ObservableProperty]
         private string squatMax;
 
-        //Confirm 1rm method
 
         [RelayCommand]
         private async Task Confirm()

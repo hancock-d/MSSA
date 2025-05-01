@@ -12,22 +12,16 @@ using StrengthBuilder.Helpers;
 
 namespace StrengthBuilder.ViewModels
 {
-    public partial class LoginViewModel : ObservableObject
+    public partial class LoginViewModel(UserService userService) : ObservableObject
     {
-        //Service to fetch, add, delete user records
-        private readonly UserService _userService;
+        //Service to fetch, add, delete user records******************************IS THIS CORRECT?
+        private readonly UserService _userService = userService;
 
         [ObservableProperty]
         private string username;
 
         [ObservableProperty]
         private bool canDeleteUser = false;
-
-        //Constructor injection of user service for DB access
-        public LoginViewModel(UserService userService)
-        {
-            _userService = userService;
-        }
 
         //Login and registration method
         [RelayCommand]
@@ -57,8 +51,6 @@ namespace StrengthBuilder.ViewModels
                     await _userService.AddUserAsync(newUser);
                     userToSet = newUser; //Set the current user session to newUser
                     await Application.Current.MainPage.DisplayAlert("Success", $"First time in? Good luck, {Username}!", "Ok");
-                    //UserSession.CurrentUser = newUser;
-
                 }
                 else
                 {
@@ -71,9 +63,7 @@ namespace StrengthBuilder.ViewModels
 
                 if (UserSession.CurrentUser != null)
                 {
-                    //Navigate to input page
                     await Shell.Current.GoToAsync(nameof(InputPage));
-
                     Username = string.Empty;
                 }
                 else

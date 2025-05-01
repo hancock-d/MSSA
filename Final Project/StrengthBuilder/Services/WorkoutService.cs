@@ -30,27 +30,27 @@ namespace StrengthBuilder.Services
                 case "Day 4":
                 case "Day 7":
                     AddWarmupSets();
-                    sets.Add($"1x5 @ {RoundToNearestFive(oneRepMax * 0.60)}#"); //working
-                    sets.Add($"1x5 @ {RoundToNearestFive(oneRepMax * 0.70)}#"); //working
-                    sets.Add($"1x5 @ {RoundToNearestFive(oneRepMax * 0.80)}#"); //working
+                    sets.Add($"1x5 @ {RoundToNearestFive(oneRepMax * 0.60)}# \t(60%)"); //working
+                    sets.Add($"1x5 @ {RoundToNearestFive(oneRepMax * 0.70)}# \t(70%)"); //working
+                    sets.Add($"1x5 @ {RoundToNearestFive(oneRepMax * 0.80)}# \t(80%)"); //working
                     sets.Add($"1xAMRAP @ {RoundToNearestFive(oneRepMax * 0.50)}#"); //empty the tank
                     break;
                 case "Day 2": //3x3 70-80-90%, days 2, 5, 8
                 case "Day 5":
                 case "Day 8":
                     AddWarmupSets();
-                    sets.Add($"1x3 @ {RoundToNearestFive(oneRepMax * 0.65)}#"); //working
-                    sets.Add($"1x3 @ {RoundToNearestFive(oneRepMax * 0.75)}#"); //working
-                    sets.Add($"1x3 @ {RoundToNearestFive(oneRepMax * 0.85)}#"); //working
+                    sets.Add($"1x3 @ {RoundToNearestFive(oneRepMax * 0.65)}# \t(65%)"); //working
+                    sets.Add($"1x3 @ {RoundToNearestFive(oneRepMax * 0.75)}# \t(75%)"); //working
+                    sets.Add($"1x3 @ {RoundToNearestFive(oneRepMax * 0.85)}# \t(85%)"); //working
                     sets.Add($"1xAMRAP @ {RoundToNearestFive(oneRepMax * 0.50)}#"); //empty the tank
                     break;
                 case "Day 3": //5-3-1 75-85-95%, days 3,6,9
                 case "Day 6":
                 case "Day 9":
                     AddWarmupSets();
-                    sets.Add($"1x5 @ {RoundToNearestFive(oneRepMax * 0.70)}#"); //working
-                    sets.Add($"1x3 @ {RoundToNearestFive(oneRepMax * 0.80)}#"); //working
-                    sets.Add($"1x1 @ {RoundToNearestFive(oneRepMax * 0.90)}#"); //working
+                    sets.Add($"1x5 @ {RoundToNearestFive(oneRepMax * 0.70)}# \t(70%)"); //working
+                    sets.Add($"1x3 @ {RoundToNearestFive(oneRepMax * 0.80)}# \t(80%)"); //working
+                    sets.Add($"1x1 @ {RoundToNearestFive(oneRepMax * 0.90)}# \t(90%)"); //working
                     sets.Add($"1xAMRAP @{RoundToNearestFive(oneRepMax * 0.50)}#"); //empty the tank
                     break;
                 default:

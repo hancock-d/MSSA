@@ -29,12 +29,12 @@ namespace StrengthBuilder
             builder.Services.AddSingleton<LoginViewModel>();
             builder.Services.AddSingleton<InputViewModel>();
             builder.Services.AddSingleton<WeekViewModel>();
-            builder.Services.AddSingleton<WorkoutViewModel>();
+            builder.Services.AddTransient<WorkoutViewModel>();
 
             builder.Services.AddSingleton<LoginPage>();
             builder.Services.AddSingleton<InputPage>();
             builder.Services.AddSingleton<WeekPage>();
-            builder.Services.AddSingleton<WorkoutPage>();
+            builder.Services.AddTransient<WorkoutPage>();
 #endif
 
             return builder.Build();
