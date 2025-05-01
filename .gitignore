@@ -372,6 +372,6 @@ AZ-204/
 *.doc
 *.docx
 
-# Ignore final project test data
+# Ignore final project data
 strengthBuilder.db3
-
+Hancock_Final Project/
