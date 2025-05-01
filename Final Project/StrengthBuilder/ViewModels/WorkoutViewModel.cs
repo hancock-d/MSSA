@@ -39,7 +39,6 @@ namespace StrengthBuilder.ViewModels
                 SquatSets.Add("No session active.");
         }
 
-        /// Relay Commands
         [RelayCommand]
         private async Task GoBack()
         {

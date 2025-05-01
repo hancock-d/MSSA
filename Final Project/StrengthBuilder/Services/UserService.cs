@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace StrengthBuilder.Services
 {
-    //handles the CRUD operations for the user
+    //handles the CRUD operations
     public class UserService
     {
         private readonly AppDbContext _dbContext;
@@ -28,11 +28,6 @@ namespace StrengthBuilder.Services
         public async Task<User?> GetUserByUsernameAsync(string username)
         {
             return await _dbContext.Users.FirstOrDefaultAsync(u => u.Username == username);
-        }
-
-        public async Task<List<User>> GetAllUsersAsync()
-        {
-            return await _dbContext.Users.ToListAsync();
         }
 
         public async Task UpdateUserAsync(User user)

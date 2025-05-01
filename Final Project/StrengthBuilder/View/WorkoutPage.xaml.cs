@@ -4,14 +4,14 @@ namespace StrengthBuilder.View;
 
 public partial class WorkoutPage : ContentPage
 {
-    private readonly WorkoutViewModel _viewModel; //field to store the injected viewmodel
+    private readonly WorkoutViewModel _viewModel; //field to store reference to the injected viewmodel
     public WorkoutPage(WorkoutViewModel viewModel)
     {
         InitializeComponent();
         _viewModel = viewModel;
-        BindingContext = viewModel; //connect UI controls to the viewmodel
+        BindingContext = viewModel;
     }
-    //Method to reload data reflecting selected day from viewmodel
+
     protected override void OnAppearing()
     {
         base.OnAppearing();

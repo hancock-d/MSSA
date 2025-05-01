@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 
 namespace StrengthBuilder.Helpers
 {
-    // class stores user session data of current user, just a static session
+    //This can be later converted into two different classes, one for navigation and one for session management
+    //stores user session data of current user, just a static session
     public static class UserSession
     {
         public static User CurrentUser { get; set; }
@@ -42,6 +43,7 @@ namespace StrengthBuilder.Helpers
             await Shell.Current.GoToAsync(nameof(LoginPage));
         }
 
+        //Navigation logic
         public static async Task GoHomeAsync()
         {
             await Shell.Current.GoToAsync(nameof(LoginPage));

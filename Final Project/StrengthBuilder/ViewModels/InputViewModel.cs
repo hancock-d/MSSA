@@ -37,13 +37,13 @@ namespace StrengthBuilder.ViewModels
                         await Shell.Current.GoToAsync(nameof(WeekPage));
                     }
                     else
-                        await Application.Current.MainPage.DisplayAlert("Error", "Please enter a valid number for squat 1RM.", "Ok");
+                        await Application.Current.MainPage.DisplayAlert("Error", "Please enter a valid number for your 1 rep max.", "Ok");
                 }
                 else
                     await Application.Current.MainPage.DisplayAlert("Error", "No active user session found.", "Ok");
             }
             else
-                await Application.Current.MainPage.DisplayAlert("Error", "Please enter your squat 1RM.", "Ok");
+                await Application.Current.MainPage.DisplayAlert("Error", "Please enter your 1 rep max.", "Ok");
         }
 
         

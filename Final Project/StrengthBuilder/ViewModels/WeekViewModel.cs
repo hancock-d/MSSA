@@ -33,7 +33,6 @@ namespace StrengthBuilder.ViewModels
             }
         }
 
-        /// Relay Commands
         [RelayCommand]
         private async Task GoInput()
         {

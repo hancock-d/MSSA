@@ -26,10 +26,6 @@ namespace StrengthBuilder
             });
 
             return new Window(shell);
-            //return new Window(new StrengthBuilder.View.InputPage());
-            //return new Window(new StrengthBuilder.View.LoginPage());
-            //return new Window(new StrengthBuilder.View.WeekPage());
-            //return new Window(new StrengthBuilder.View.WorkoutPage());
             //return new Window(new AppShell());
         }
     }

@@ -7,6 +7,6 @@ public partial class WeekPage : ContentPage
     public WeekPage(WeekViewModel viewModel)
     {
         InitializeComponent();
-        BindingContext = viewModel; //connect UI controls to the viewmodel
+        BindingContext = viewModel;
     }
 }

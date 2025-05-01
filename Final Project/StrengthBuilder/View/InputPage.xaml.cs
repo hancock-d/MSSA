@@ -7,14 +7,14 @@ public partial class InputPage : ContentPage
     public InputPage(InputViewModel viewModel)
     {
         InitializeComponent();
-        BindingContext = viewModel; //set the binding context to the view model
+        BindingContext = viewModel;
     }
     protected override void OnAppearing()
     {
         base.OnAppearing();
         if (BindingContext is InputViewModel viewModel)
         {
-            viewModel.LoadCurrentSquatMax(); //refresh user's max when page loads
+            viewModel.LoadCurrentSquatMax();
         }
     }
 }

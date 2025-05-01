@@ -5,11 +5,11 @@ namespace StrengthBuilder.View;
 
 public partial class LoginPage : ContentPage
 {
-    //LoginViewModel injected by constructor
+
     public LoginPage(LoginViewModel viewModel)
     {
         InitializeComponent();
-        BindingContext = viewModel; //connect UI controls to the viewmodel
+        BindingContext = viewModel;
     }
     protected override void OnAppearing()
     {

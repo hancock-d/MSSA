@@ -14,7 +14,7 @@ namespace StrengthBuilder.ViewModels
 {
     public partial class LoginViewModel(UserService userService) : ObservableObject
     {
-        //Service to fetch, add, delete user records******************************IS THIS CORRECT?
+        
         private readonly UserService _userService = userService;
 
         [ObservableProperty]
@@ -54,7 +54,7 @@ namespace StrengthBuilder.ViewModels
                 }
                 else
                 {
-                    userToSet = existingUser; //set session to existing user
+                    userToSet = existingUser; //set session to existingUser
                     await Application.Current.MainPage.DisplayAlert("Success", $"Welcome back, {Username}!", "Ok");
                 }
 
@@ -66,10 +66,7 @@ namespace StrengthBuilder.ViewModels
                     await Shell.Current.GoToAsync(nameof(InputPage));
                     Username = string.Empty;
                 }
-                else
-                {
-                    await Application.Current.MainPage.DisplayAlert("Error", "Unable to initialize user session.", "Ok");
-                }
+
             }
             catch (Exception ex)
             {
@@ -78,8 +75,6 @@ namespace StrengthBuilder.ViewModels
             }
         }
 
-        /// Relay Commands
-        //Delete user method
         [RelayCommand]
         private async Task DeleteUser()
         {
@@ -95,7 +90,6 @@ namespace StrengthBuilder.ViewModels
                 return;
             try
             {
-                //delete user from db
                 await _userService.DeleteUserAsync(UserSession.CurrentUser);
                 await UserSession.ClearSession();
 

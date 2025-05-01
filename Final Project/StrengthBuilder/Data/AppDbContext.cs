@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace StrengthBuilder.Data
 {
-    //db context for the app, handles the database connection and models
+    //DB context for the app, handles the database connection/creation
     public class AppDbContext : DbContext
     {
 
         public DbSet<User> Users { get; set; }
 
-        //only works for windows
+        //DB path for windows
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //{
         //    if (!optionsBuilder.IsConfigured)
