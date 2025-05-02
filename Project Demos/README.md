@@ -7,7 +7,7 @@ Built a 3D tower defense game in Unity using C# scripts and prefab structures. M
 
 ---
 
-🏋️ StrengthBuilder (MAUI)
+### 🏋️ StrengthBuilder (MAUI)
 Created a cross-platform fitness app using .NET MAUI and C#. Tracks 1RM progress, stores user data with SQLite, and follows the MVVM pattern. Makes the workout for you!
 
 [![Watch the video](https://img.youtube.com/vi/HhaAERJ2Ah0/0.jpg)](https://www.youtube.com/shorts/HhaAERJ2Ah0)
